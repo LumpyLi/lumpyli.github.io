@@ -1,0 +1,2466 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="奥多拉交互设计文档">
+      
+      
+        <link rel="canonical" href="http://docs.oduola.cn/design/jettMobSpec/spec/M6.绑定流程/M6-1.小乐迪绑定流程/">
+      
+      
+        <meta name="author" content="李广超">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../../">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.5.4">
+    
+    
+      
+        <title>M6-1. 小乐迪绑定流程 - 奥多拉交互设计文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.aa3de92b.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="red" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#whats-new" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://docs.oduola.cn/design/" title="奥多拉交互设计文档" class="md-header-nav__button md-logo">
+          
+            <img src="../../../../logo/logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                奥多拉交互设计文档
+              </span>
+              <span class="md-header-nav__topic">
+                M6-1. 小乐迪绑定流程
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../.." title="Overview" class="md-tabs__link">
+        Overview
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../" title="乐迪智能 app" class="md-tabs__link md-tabs__link--active">
+          乐迪智能 app
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../jettTV/" title="乐迪 TV 互动" class="md-tabs__link">
+          乐迪 TV 互动
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../projectA/" title="A 项目：智能故事机" class="md-tabs__link">
+          A 项目：智能故事机
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../jiaJiaMobDesign/" title="嘉佳智能 app" class="md-tabs__link">
+          嘉佳智能 app
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../jettPhoneWechatSpec/" title="乐迪电话机器人" class="md-tabs__link">
+          乐迪电话机器人
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../jettECE/" title="乐迪早教机器人" class="md-tabs__link">
+          乐迪早教机器人
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../jettBS/" title="智能精灵 - 乐迪" class="md-tabs__link">
+          智能精灵 - 乐迪
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../dogo/" title="导购邦" class="md-tabs__link">
+          导购邦
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../../../logo/logo.svg" width="24" height="24">
+      
+    </span>
+    奥多拉交互设计文档
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      乐迪智能 app
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        乐迪智能 app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../" title="Home Page" class="md-nav__link">
+      Home Page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../whatsNew/" title="What's New?" class="md-nav__link">
+      What's New?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../layout/" title="Layout" class="md-nav__link">
+      Layout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" checked>
+    
+    <label class="md-nav__link" for="nav-2-4">
+      Spec
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        Spec
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M0.登录-注册-忘记密码/" title="M0. 登录 - 注册 - 忘记密码" class="md-nav__link">
+      M0. 登录 - 注册 - 忘记密码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-2" type="checkbox" id="nav-2-4-2">
+    
+    <label class="md-nav__link" for="nav-2-4-2">
+      M1. 设备主页
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-2">
+        M1. 设备主页
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-2-1" type="checkbox" id="nav-2-4-2-1">
+    
+    <label class="md-nav__link" for="nav-2-4-2-1">
+      M1-1. 小乐迪设备主页
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-4-2-1">
+        M1-1. 小乐迪设备主页
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M1.设备主页/M1-1.小乐迪设备主页/M1-1.小乐迪设备主页/" title="M1-1. 小乐迪设备主页" class="md-nav__link">
+      M1-1. 小乐迪设备主页
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M1.设备主页/M1-1.小乐迪设备主页/M1-1-2.乐点播/" title="M1-1-2. 乐点播" class="md-nav__link">
+      M1-1-2. 乐点播
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M1.设备主页/M1-1.小乐迪设备主页/M1-1-5.网络连接/" title="M1-1-5. 网络连接" class="md-nav__link">
+      M1-1-5. 网络连接
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M1.设备主页/M1-1.小乐迪设备主页/M1-1-6.STEAM/" title="M1-1-6. STEAM" class="md-nav__link">
+      M1-1-6. STEAM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M1.设备主页/M1-1.小乐迪设备主页/M1-1-6.STEAM(Archived)/" title="M1-1-6. STEAM (Archived)" class="md-nav__link">
+      M1-1-6. STEAM (Archived)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-2-2" type="checkbox" id="nav-2-4-2-2">
+    
+    <label class="md-nav__link" for="nav-2-4-2-2">
+      M1-3. 小乐迪设备主页（未绑定）
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-4-2-2">
+        M1-3. 小乐迪设备主页（未绑定）
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M1.设备主页/M1-3.小乐迪设备主页（未绑定）/M1-3.小乐迪设备主页（未绑定）/" title="M1-3. 小乐迪设备主页（未绑定）" class="md-nav__link">
+      M1-3. 小乐迪设备主页（未绑定）
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-3" type="checkbox" id="nav-2-4-3">
+    
+    <label class="md-nav__link" for="nav-2-4-3">
+      M2. 发现
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-3">
+        M2. 发现
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M2.发现/M2.发现/" title="M2. 发现" class="md-nav__link">
+      M2. 发现
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-4" type="checkbox" id="nav-2-4-4">
+    
+    <label class="md-nav__link" for="nav-2-4-4">
+      M3. 商城
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-4">
+        M3. 商城
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M3.商城/M3.商城/" title="M3. 商城" class="md-nav__link">
+      M3. 商城
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-5" type="checkbox" id="nav-2-4-5">
+    
+    <label class="md-nav__link" for="nav-2-4-5">
+      M4. 我的
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-5">
+        M4. 我的
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M4.我的/M4.我的/" title="M4. 我的" class="md-nav__link">
+      M4. 我的
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-6" type="checkbox" id="nav-2-4-6">
+    
+    <label class="md-nav__link" for="nav-2-4-6">
+      M5. 宝贝设备
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-6">
+        M5. 宝贝设备
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M5.宝贝设备/M5.宝贝设备/" title="M5. 宝贝设备" class="md-nav__link">
+      M5. 宝贝设备
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-7" type="checkbox" id="nav-2-4-7" checked>
+    
+    <label class="md-nav__link" for="nav-2-4-7">
+      M6. 绑定流程
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-7">
+        M6. 绑定流程
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        M6-1. 小乐迪绑定流程
+      </label>
+    
+    <a href="./" title="M6-1. 小乐迪绑定流程" class="md-nav__link md-nav__link--active">
+      M6-1. 小乐迪绑定流程
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#whats-new" title="What's New?" class="md-nav__link">
+    What's New?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2017-05-10" title="2017-05-10" class="md-nav__link">
+    2017-05-10
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-05-09" title="2017-05-09" class="md-nav__link">
+    2017-05-09
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-04-27" title="2017-04-27" class="md-nav__link">
+    2017-04-27
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-04-24" title="2017-04-24" class="md-nav__link">
+    2017-04-24
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flow" title="Flow" class="md-nav__link">
+    Flow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spec" title="Spec" class="md-nav__link">
+    Spec
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#m6-1" title="M6-1. 绑定乐迪" class="md-nav__link">
+    M6-1. 绑定乐迪
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-2" title="M6-2. 扫描二维码" class="md-nav__link">
+    M6-2. 扫描二维码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-2-1" title="M6-2-1. 扫描二维码（扫描中）" class="md-nav__link">
+    M6-2-1. 扫描二维码（扫描中）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-3" title="M6-3. 添加宝贝" class="md-nav__link">
+    M6-3. 添加宝贝
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-3-1-" title="M6-3-1. 添加宝贝 - 填写昵称" class="md-nav__link">
+    M6-3-1. 添加宝贝 - 填写昵称
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-3-2-" title="M6-3-2. 添加宝贝 - 选择生日" class="md-nav__link">
+    M6-3-2. 添加宝贝 - 选择生日
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-3-3-" title="M6-3-3. 添加宝贝 - 选择性别" class="md-nav__link">
+    M6-3-3. 添加宝贝 - 选择性别
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-3-4-" title="M6-3-4. 添加宝贝 - 选择与宝贝关系" class="md-nav__link">
+    M6-3-4. 添加宝贝 - 选择与宝贝关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-3-5-" title="M6-3-5. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系" class="md-nav__link">
+    M6-3-5. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-3-6-" title="M6-3-6. 添加宝贝 - 显示自定义关系" class="md-nav__link">
+    M6-3-6. 添加宝贝 - 显示自定义关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-4" title="M6-4. 添加宝贝头像" class="md-nav__link">
+    M6-4. 添加宝贝头像
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-4-1-" title="M6-4-1. 添加宝贝头像 - 选择添加头像方式" class="md-nav__link">
+    M6-4-1. 添加宝贝头像 - 选择添加头像方式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-5" title="M6-5. 激活中" class="md-nav__link">
+    M6-5. 激活中
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-6-1" title="M6-6-1. 全局网络不可用" class="md-nav__link">
+    M6-6-1. 全局网络不可用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-6-2" title="M6-6-2. 扫一扫（扫描第三方二维码）" class="md-nav__link">
+    M6-6-2. 扫一扫（扫描第三方二维码）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-6-3-ott" title="M6-6-3. 扫一扫（OTT 超时）" class="md-nav__link">
+    M6-6-3. 扫一扫（OTT 超时）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-6-4-" title="M6-6-4. 添加宝贝 - 填写昵称 - 宝贝昵称超长" class="md-nav__link">
+    M6-6-4. 添加宝贝 - 填写昵称 - 宝贝昵称超长
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-6-5-" title="M6-6-5. 添加宝贝 - 填写昵称 - 宝贝昵称含有不合法字符" class="md-nav__link">
+    M6-6-5. 添加宝贝 - 填写昵称 - 宝贝昵称含有不合法字符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-6-6-" title="M6-6-6. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系 - 宝贝关系超长" class="md-nav__link">
+    M6-6-6. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系 - 宝贝关系超长
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-6-7-" title="M6-6-7. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系 - 宝贝关系含有不合法字符" class="md-nav__link">
+    M6-6-7. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系 - 宝贝关系含有不合法字符
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      2.5.0
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        2.5.0
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M0-1. 登录/" title="M0-1. 登录 (Working)" class="md-nav__link">
+      M0-1. 登录 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M0-2. 注册/" title="M0-2. 注册 (Working)" class="md-nav__link">
+      M0-2. 注册 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M0-3. 忘记密码/" title="M0-3. 忘记密码 (Working)" class="md-nav__link">
+      M0-3. 忘记密码 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M0-4. 绑定/" title="M0-4. 绑定 (Working)" class="md-nav__link">
+      M0-4. 绑定 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M1. 内容/" title="M1. 内容" class="md-nav__link">
+      M1. 内容
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-6" type="checkbox" id="nav-2-5-6">
+    
+    <label class="md-nav__link" for="nav-2-5-6">
+      M2. 技能
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-5-6">
+        M2. 技能
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M2. 技能/M2. 技能/" title="M2. 技能 (Working)" class="md-nav__link">
+      M2. 技能 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M2. 技能/M2-1. 扫一扫连网/" title="M2-1. 扫一扫连网 (Working)" class="md-nav__link">
+      M2-1. 扫一扫连网 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M2. 技能/M2-2. 切换机器人/" title="M2-2. 切换机器人" class="md-nav__link">
+      M2-2. 切换机器人
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M2. 技能/M2-3. STEAM 编程/" title="M2-3. STEAM 编程 (Working)" class="md-nav__link">
+      M2-3. STEAM 编程 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M2. 技能/M2-4. 帮我说/" title="M2-4. 帮我说 (Working)" class="md-nav__link">
+      M2-4. 帮我说 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M2. 技能/M2-5. 防沉迷/" title="M2-5. 防沉迷 (Working)" class="md-nav__link">
+      M2-5. 防沉迷 (Working)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M3. 发现/" title="M3. 发现（Working）" class="md-nav__link">
+      M3. 发现（Working）
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M4. 我的/" title="M4. 我的（Working）" class="md-nav__link">
+      M4. 我的（Working）
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      乐迪 TV 互动
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        乐迪 TV 互动
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettTV/" title="Home Page" class="md-nav__link">
+      Home Page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettTV/Changelog/" title="Changelog" class="md-nav__link">
+      Changelog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Spec
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        Spec
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettTV/spec/TX-1. 启动页&首次连接设备检测/" title="TX-1. 启动页 & 首次连接设备检测" class="md-nav__link">
+      TX-1. 启动页 & 首次连接设备检测
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettTV/spec/TX-2. 网络及设备检测/" title="TX-2. 网络及设备检测" class="md-nav__link">
+      TX-2. 网络及设备检测
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettTV/spec/T1. 主页/" title="T1. 主页" class="md-nav__link">
+      T1. 主页
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettTV/spec/T2. 关卡/" title="T2. 关卡" class="md-nav__link">
+      T2. 关卡
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettTV/spec/T3. Intro 动画及起飞相关/" title="T3. Intro 动画及起飞相关" class="md-nav__link">
+      T3. Intro 动画及起飞相关
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-6" type="checkbox" id="nav-3-3-6">
+    
+    <label class="md-nav__link" for="nav-3-3-6">
+      T4. 游戏
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-6">
+        T4. 游戏
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettTV/spec/T4-1. 游戏交互 - 选择题/" title="T4-1. 游戏交互 - 选择题" class="md-nav__link">
+      T4-1. 游戏交互 - 选择题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettTV/spec/T4-2. 游戏交互 - 跟读题/" title="T4-2. 游戏交互 - 跟读题" class="md-nav__link">
+      T4-2. 游戏交互 - 跟读题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettTV/spec/T4-3. 游戏交互 - 叫飞侠帮忙/" title="T4-3. 游戏交互 - 叫飞侠帮忙" class="md-nav__link">
+      T4-3. 游戏交互 - 叫飞侠帮忙
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettTV/spec/T4-4. 游戏交互 - 叫口号/" title="T4-4. 游戏交互 - 叫口号" class="md-nav__link">
+      T4-4. 游戏交互 - 叫口号
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettTV/spec/T4-5. [全局] - 退出游戏/" title="T4-5. [全局] - 退出游戏" class="md-nav__link">
+      T4-5. [全局] - 退出游戏
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettTV/spec/T4-6. 闯关成功提示/" title="T4-6. 闯关成功提示" class="md-nav__link">
+      T4-6. 闯关成功提示
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettTV/spec/T4-7. 获得游戏勋章/" title="T4-7. 获得游戏勋章" class="md-nav__link">
+      T4-7. 获得游戏勋章
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      A 项目：智能故事机
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        A 项目：智能故事机
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../projectA/" title="Home Page" class="md-nav__link">
+      Home Page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      PRD
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        PRD
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../projectA/prd/Changelog/" title="Changelog" class="md-nav__link">
+      Changelog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../projectA/prd/prd/" title="PRD" class="md-nav__link">
+      PRD
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Spec
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        Spec
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../projectA/spec/changelog/" title="Changelog" class="md-nav__link">
+      Changelog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../projectA/spec/MX-1. 登录/" title="MX-1. 登录" class="md-nav__link">
+      MX-1. 登录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../projectA/spec/MX-2. 配网/" title="MX-2. 配网" class="md-nav__link">
+      MX-2. 配网
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../projectA/spec/M1. 内容/" title="M1. 内容" class="md-nav__link">
+      M1. 内容
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../projectA/spec/M2. 语聊/" title="M2. 语聊" class="md-nav__link">
+      M2. 语聊
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../projectA/spec/M3. 技能/" title="M3. 技能" class="md-nav__link">
+      M3. 技能
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../projectA/spec/M4. 我的/" title="M4. 我的" class="md-nav__link">
+      M4. 我的
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      嘉佳智能 app
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        嘉佳智能 app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      视觉稿
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        视觉稿
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jiaJiaMobDesign/" title="登录／注册／激活流程" class="md-nav__link">
+      登录／注册／激活流程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jiaJiaMobDesign/shake/" title="摇一摇" class="md-nav__link">
+      摇一摇
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      乐迪电话机器人
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        乐迪电话机器人
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettPhoneWechatSpec/" title="导航" class="md-nav__link">
+      导航
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      乐迪早教机器人
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        乐迪早教机器人
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettECE/" title="Home Page" class="md-nav__link">
+      Home Page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettECE/whatsNew/" title="What's New?" class="md-nav__link">
+      What's New?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      Spec
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        Spec
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettECE/spec/M1.语音交互/" title="M1. 语音交互" class="md-nav__link">
+      M1. 语音交互
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettECE/spec/M2.音频点播/" title="M2. 音频点播" class="md-nav__link">
+      M2. 音频点播
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      智能精灵 - 乐迪
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        智能精灵 - 乐迪
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettBS/" title="Home Page" class="md-nav__link">
+      Home Page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettBS/whatsNew/" title="What's New" class="md-nav__link">
+      What's New
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../jettBS/Resource/" title="Resource" class="md-nav__link">
+      Resource
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      导购邦
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        导购邦
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../dogo/" title="Home Page" class="md-nav__link">
+      Home Page
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#whats-new" title="What's New?" class="md-nav__link">
+    What's New?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2017-05-10" title="2017-05-10" class="md-nav__link">
+    2017-05-10
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-05-09" title="2017-05-09" class="md-nav__link">
+    2017-05-09
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-04-27" title="2017-04-27" class="md-nav__link">
+    2017-04-27
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-04-24" title="2017-04-24" class="md-nav__link">
+    2017-04-24
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flow" title="Flow" class="md-nav__link">
+    Flow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spec" title="Spec" class="md-nav__link">
+    Spec
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#m6-1" title="M6-1. 绑定乐迪" class="md-nav__link">
+    M6-1. 绑定乐迪
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-2" title="M6-2. 扫描二维码" class="md-nav__link">
+    M6-2. 扫描二维码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-2-1" title="M6-2-1. 扫描二维码（扫描中）" class="md-nav__link">
+    M6-2-1. 扫描二维码（扫描中）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-3" title="M6-3. 添加宝贝" class="md-nav__link">
+    M6-3. 添加宝贝
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-3-1-" title="M6-3-1. 添加宝贝 - 填写昵称" class="md-nav__link">
+    M6-3-1. 添加宝贝 - 填写昵称
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-3-2-" title="M6-3-2. 添加宝贝 - 选择生日" class="md-nav__link">
+    M6-3-2. 添加宝贝 - 选择生日
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-3-3-" title="M6-3-3. 添加宝贝 - 选择性别" class="md-nav__link">
+    M6-3-3. 添加宝贝 - 选择性别
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-3-4-" title="M6-3-4. 添加宝贝 - 选择与宝贝关系" class="md-nav__link">
+    M6-3-4. 添加宝贝 - 选择与宝贝关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-3-5-" title="M6-3-5. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系" class="md-nav__link">
+    M6-3-5. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-3-6-" title="M6-3-6. 添加宝贝 - 显示自定义关系" class="md-nav__link">
+    M6-3-6. 添加宝贝 - 显示自定义关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-4" title="M6-4. 添加宝贝头像" class="md-nav__link">
+    M6-4. 添加宝贝头像
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-4-1-" title="M6-4-1. 添加宝贝头像 - 选择添加头像方式" class="md-nav__link">
+    M6-4-1. 添加宝贝头像 - 选择添加头像方式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-5" title="M6-5. 激活中" class="md-nav__link">
+    M6-5. 激活中
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-6-1" title="M6-6-1. 全局网络不可用" class="md-nav__link">
+    M6-6-1. 全局网络不可用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-6-2" title="M6-6-2. 扫一扫（扫描第三方二维码）" class="md-nav__link">
+    M6-6-2. 扫一扫（扫描第三方二维码）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-6-3-ott" title="M6-6-3. 扫一扫（OTT 超时）" class="md-nav__link">
+    M6-6-3. 扫一扫（OTT 超时）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-6-4-" title="M6-6-4. 添加宝贝 - 填写昵称 - 宝贝昵称超长" class="md-nav__link">
+    M6-6-4. 添加宝贝 - 填写昵称 - 宝贝昵称超长
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-6-5-" title="M6-6-5. 添加宝贝 - 填写昵称 - 宝贝昵称含有不合法字符" class="md-nav__link">
+    M6-6-5. 添加宝贝 - 填写昵称 - 宝贝昵称含有不合法字符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-6-6-" title="M6-6-6. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系 - 宝贝关系超长" class="md-nav__link">
+    M6-6-6. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系 - 宝贝关系超长
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m6-6-7-" title="M6-6-7. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系 - 宝贝关系含有不合法字符" class="md-nav__link">
+    M6-6-7. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系 - 宝贝关系含有不合法字符
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>M6-1. 小乐迪绑定流程</h1>
+                
+                <h2 id="whats-new">What's New?<a class="headerlink" href="#whats-new" title="Permanent link">&para;</a></h2>
+<h3 id="2017-05-10">2017-05-10<a class="headerlink" href="#2017-05-10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>优化 <a href="../M6-1.小乐迪绑定流程#m6-3-2-">M6-3-2. 添加宝贝 - 选择生日</a> 中 Date Picker 上的 tool bar</li>
+</ul>
+<h3 id="2017-05-09">2017-05-09<a class="headerlink" href="#2017-05-09" title="Permanent link">&para;</a></h3>
+<ul>
+<li>为所有扫码页面添加 <strong>请对乐迪说“绑定”</strong> 的提示，见 <a href="../M6-1.小乐迪绑定流程#m6-2">M6-2. 扫描二维码</a> 等相关页面</li>
+</ul>
+<h3 id="2017-04-27">2017-04-27<a class="headerlink" href="#2017-04-27" title="Permanent link">&para;</a></h3>
+<ul>
+<li>因需求变更，拆分连网与绑定流程，连网流程见 <a href="../../M1.设备主页/M1-1.小乐迪设备主页/M1-1-5.网络连接/">M1-1-5. 网络连接</a></li>
+<li>重新梳理绑定流程</li>
+</ul>
+<h3 id="2017-04-24">2017-04-24<a class="headerlink" href="#2017-04-24" title="Permanent link">&para;</a></h3>
+<ul>
+<li>首次提交</li>
+</ul>
+<hr />
+<h2 id="flow">Flow<a class="headerlink" href="#flow" title="Permanent link">&para;</a></h2>
+<p><a href="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/axure/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE/start.html">绑定、连网流程图</a></p>
+<h2 id="spec">Spec<a class="headerlink" href="#spec" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>下载全部 Spec 图片 <a href="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/%5BjettMOB%5D%5B2017.05.10%5DM6.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B.zip">Update: 2017-05-10</a></p>
+</div>
+<h3 id="m6-1">M6-1. 绑定乐迪<a class="headerlink" href="#m6-1" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%20%E7%BB%91%E5%AE%9A%E4%B9%90%E8%BF%AA.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回至 <a href="../../M1.设备主页/M1-3.小乐迪设备主页（未绑定）/M1-3.小乐迪设备主页（未绑定）/">M1-3. 小乐迪设备主页（未绑定）</a></li>
+<li>点击 <strong>绑定乐迪</strong> 按钮进入 <a href="./#m6-2">M6-2. 扫描二维码</a></li>
+<li>点击 <strong>设备还没有网络？</strong> 按钮进入 <a href="../../M1.设备主页/M1-1.小乐迪设备主页/M1-1-5.网络连接/">M1-1-5-0. 小乐迪连网页面（手机没连 Wi-Fi）</a>  进入连网流程</li>
+</ol>
+<h3 id="m6-2">M6-2. 扫描二维码<a class="headerlink" href="#m6-2" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-2.%20%E6%89%AB%E6%8F%8F%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回至 <a href="./#m6-1">M6-1. 绑定乐迪</a></li>
+<li>识别到是二维码后进入 <a href="./#m6-2-1">M6-2-1. 扫一扫（扫描中）</a></li>
+</ol>
+<h3 id="m6-2-1">M6-2-1. 扫描二维码（扫描中）<a class="headerlink" href="#m6-2-1" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-2-1.%20%E6%89%AB%E6%8F%8F%E4%BA%8C%E7%BB%B4%E7%A0%81%EF%BC%88%E6%89%AB%E6%8F%8F%E4%B8%AD%EF%BC%89.jpg" /></p>
+<ol>
+<li>根据不同的二维码跳转不同的页面<ul>
+<li>若扫描时，手机网络不可用，则进入 <a href="./#m6-6-1">M6-6-1. 全局网络不可用</a></li>
+<li>若识别到是 RBT 生成的绑定二维码，则进入 <a href="./#m6-3">M6-3. 添加宝贝</a></li>
+<li>若识别到是第三方二维码，则进入 <a href="./#m6-6-2">M6-6-2. 扫一扫（扫描第三方二维码）</a></li>
+<li>若二维码超时失效（有效时间 3 分钟），则进入 <a href="./#m6-6-3-ott">M6-6-3. 扫一扫（OTT 超时）</a></li>
+</ul>
+</li>
+</ol>
+<h3 id="m6-3">M6-3. 添加宝贝<a class="headerlink" href="#m6-3" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-3.%20%E6%B7%BB%E5%8A%A0%E5%AE%9D%E8%B4%9D.jpg" /></p>
+<ol>
+<li>点击 <strong>取消</strong> 按钮退出添加宝贝流程，返回至 <a href="../../M0.登录-注册-忘记密码/#m0-1-or">M0-1.登录 or 注册页面</a></li>
+<li>点击输入宝贝昵称，见 <a href="./#m6-3-1-">M6-3-1. 添加宝贝 - 填写昵称</a></li>
+<li>点击选择宝贝生日，见 <a href="./#m6-3-2-">M6-3-2. 添加宝贝 - 选择生日</a></li>
+<li>点击选择宝贝性别，见 <a href="./#m6-3-3-">M6-3-3. 添加宝贝 - 选择性别</a></li>
+<li>点击选择与宝贝的关系，见 <a href="./#m6-3-4-">M6-3-4. 添加宝贝 - 选择与宝贝关系</a></li>
+<li>点击输入自定义与宝贝的关系，见 <a href="./#m6-3-5-">M6-3-5. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系</a></li>
+<li>当所有数据填写完毕，<strong>添加宝贝</strong> 按钮变为可点击状态。点击之后进入添加宝贝头像，见 <a href="./#m6-4">M6-4. 添加宝贝头像</a></li>
+</ol>
+<h3 id="m6-3-1-">M6-3-1. 添加宝贝 - 填写昵称<a class="headerlink" href="#m6-3-1-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-3-1.%20%E6%B7%BB%E5%8A%A0%E5%AE%9D%E8%B4%9D%20-%20%E5%A1%AB%E5%86%99%E6%98%B5%E7%A7%B0.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回至 <a href="./#m6-3">M6-3. 添加宝贝</a></li>
+<li>弹出输入法键盘，可输入 1 - 8 个字符，不可含有空格或标点符号<ul>
+<li>若超出 8 个字符，则在光标离开输入框的时候提示 <a href="./#m6-6-4-">M6-6-4. 添加宝贝 - 填写昵称 - 宝贝昵称超长</a></li>
+<li>若含有空格或标点符号，则在光标离开输入框的时候提示 <a href="./#m6-6-5-">M6-6-5. 添加宝贝 - 填写昵称 - 宝贝昵称含有不合法字符</a></li>
+</ul>
+</li>
+<li>点击选择宝贝生日，见 <a href="./#m6-3-2-">M6-3-2. 添加宝贝 - 选择生日</a></li>
+<li>点击选择宝贝性别，见 <a href="./#m6-3-3-">M6-3-3. 添加宝贝 - 选择性别</a></li>
+<li>点击选择与宝贝的关系，见 <a href="./#m6-3-4-">M6-3-4. 添加宝贝 - 选择与宝贝关系</a></li>
+<li>点击 <strong>return</strong> 按钮或屏幕空白位置收起键盘</li>
+</ol>
+<h3 id="m6-3-2-">M6-3-2. 添加宝贝 - 选择生日<a class="headerlink" href="#m6-3-2-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-3-2.%20%E6%B7%BB%E5%8A%A0%E5%AE%9D%E8%B4%9D%20-%20%E9%80%89%E6%8B%A9%E7%94%9F%E6%97%A5.jpg" /></p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>系统要根据宝贝生日计算 <strong>宝贝年龄</strong>，格式是 x 岁 x 个月 / x 岁，例如 3 岁 1 个月 / 4 岁</p>
+</div>
+<ol>
+<li>Date Picker 默认日期是 2014 年 1 月 1 日，可选范围是 1970 年 1 月 1 日至当前日期，超出范围不可选</li>
+<li>点击 <strong>完成</strong> 按钮保存日期到宝贝生日，并关闭当前的 Date Picker</li>
+<li>点击遮罩 <strong>不保存</strong> 日期到宝贝生日，并关闭当前的 Date Picker</li>
+</ol>
+<h3 id="m6-3-3-">M6-3-3. 添加宝贝 - 选择性别<a class="headerlink" href="#m6-3-3-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-3-3.%20%E6%B7%BB%E5%8A%A0%E5%AE%9D%E8%B4%9D%20-%20%E9%80%89%E6%8B%A9%E6%80%A7%E5%88%AB.jpg" /></p>
+<ol>
+<li>选择 <strong>男孩</strong> 保存到宝贝性别，并关闭当前的 Action Sheet</li>
+<li>选择 <strong>女孩</strong> 保存到宝贝性别，并关闭当前的 Action Sheet</li>
+<li>点击 <strong>取消</strong> 按钮不保存性别到宝贝性别，并关闭当前的 Action Sheet</li>
+<li>点击遮罩层不保存性别到宝贝性别，并关闭当前的 Action Sheet</li>
+</ol>
+<h3 id="m6-3-4-">M6-3-4. 添加宝贝 - 选择与宝贝关系<a class="headerlink" href="#m6-3-4-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-3-4.%20%E6%B7%BB%E5%8A%A0%E5%AE%9D%E8%B4%9D%20-%20%E9%80%89%E6%8B%A9%E4%B8%8E%E5%AE%9D%E8%B4%9D%E5%85%B3%E7%B3%BB.jpg" /></p>
+<ol>
+<li>点击 <strong>取消</strong> 按钮退出添加宝贝流程，返回至 <a href="../../M0.登录-注册-忘记密码/#m0-1-or">M0-1.登录 or 注册页面</a></li>
+<li>点击输入宝贝昵称，见 <a href="./#m6-3-1-">M6-3-1. 添加宝贝 - 填写昵称</a></li>
+<li>点击选择宝贝生日，见 <a href="./#m6-3-2-">M6-3-2. 添加宝贝 - 选择生日</a></li>
+<li>点击选择宝贝性别，见 <a href="./#m6-3-3-">M6-3-3. 添加宝贝 - 选择性别</a></li>
+<li>点击快速选择与宝贝的关系，单选，选中后不能取消</li>
+<li>点击输入自定义与宝贝的关系，见 <a href="./#m6-7-3-">M6-3-5. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系</a></li>
+<li>当所有数据填写完毕，<strong>添加宝贝</strong> 按钮变为可点击状态。点击之后进入添加宝贝头像，见 <a href="./#m6-4">M6-4. 添加宝贝头像</a></li>
+</ol>
+<h3 id="m6-3-5-">M6-3-5. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系<a class="headerlink" href="#m6-3-5-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-3-5.%20%E6%B7%BB%E5%8A%A0%E5%AE%9D%E8%B4%9D%20-%20%E9%80%89%E6%8B%A9%E4%B8%8E%E5%AE%9D%E8%B4%9D%E5%85%B3%E7%B3%BB%20-%20%E8%BE%93%E5%85%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%85%B3%E7%B3%BB.jpg" /></p>
+<ol>
+<li>点击 <strong>取消</strong> 按钮不保存数据并返回至 <a href="./#m6-3">M6-3. 添加宝贝</a></li>
+<li>当输入有效的宝贝关系后，<strong>保存</strong> 按钮变为可点击状态，点击后保存数据并返回至 <a href="./#m6-3-6-">M6-3-6. 添加宝贝 - 显示自定义关系</a><ul>
+<li>若超出 12 个字符，则在光标离开输入框的时候提示 <a href="./#m6-6-6-">M6-6-6. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系 - 宝贝关系超长</a></li>
+<li>若含有空格或标点符号，则在光标离开输入框的时候提示 <a href="./#m6-6-7-">M6-6-7. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系 - 宝贝关系含有不合法字符</a></li>
+</ul>
+</li>
+<li>光标自动定位输入框并弹出键盘，可输入 1 - 12 个字符，不可含有空格或标点符号</li>
+<li>点击 <strong>return</strong> 按钮作用同 <strong>保存</strong> 按钮</li>
+</ol>
+<h3 id="m6-3-6-">M6-3-6. 添加宝贝 - 显示自定义关系<a class="headerlink" href="#m6-3-6-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-3-6.%20%E6%B7%BB%E5%8A%A0%E5%AE%9D%E8%B4%9D%20-%20%E6%98%BE%E7%A4%BA%E8%87%AA%E5%AE%9A%E4%B9%89%E5%85%B3%E7%B3%BB.jpg" /></p>
+<ol>
+<li>点击 <strong>取消</strong> 按钮退出添加宝贝流程，返回至 <a href="../../M0.登录-注册-忘记密码/#m0-1-or">M0-1.登录 or 注册页面</a></li>
+<li>点击输入宝贝昵称，见 <a href="./#m6-3-1-">M6-3-1. 添加宝贝 - 填写昵称</a></li>
+<li>点击选择宝贝生日，见 <a href="./#m6-3-2-">M6-3-2. 添加宝贝 - 选择生日</a></li>
+<li>点击选择宝贝性别，见 <a href="./#m6-3-3-">M6-3-3. 添加宝贝 - 选择性别</a></li>
+<li>点击选择与宝贝的关系，见 <a href="./#m6-3-4-">M6-3-4. 添加宝贝 - 选择与宝贝关系</a></li>
+<li>默认显示 4 个字符，超过 4 个字符之后用 <strong>前 4 个字符 + ...</strong> 代替。点击输入自定义与宝贝的关系，见 <a href="./#m6-3-5-">M6-3-5. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系</a></li>
+<li>当所有数据填写完毕，<strong>添加宝贝</strong> 按钮变为可点击状态。点击之后进入添加宝贝头像，见 <a href="./#m6-4">M6-4. 添加宝贝头像</a></li>
+</ol>
+<h3 id="m6-4">M6-4. 添加宝贝头像<a class="headerlink" href="#m6-4" title="Permanent link">&para;</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>宝贝头像是选填项目</p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-4.%20%E6%B7%BB%E5%8A%A0%E5%AE%9D%E8%B4%9D%E5%A4%B4%E5%83%8F.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回至 <a href="./#m6-3">M6-3. 添加宝贝</a></li>
+<li>点击进入 <a href="./#m6-4-1-">M6-4-1. 添加宝贝头像 - 选择添加头像方式</a></li>
+<li>显示 <a href="./#m6-3-1-">M6-3-1. 添加宝贝 - 填写昵称</a> 所填写的宝贝昵称</li>
+<li>点击 <strong>开始使用</strong> 按钮进入 <a href="./#m6-5">M6-5. 激活中</a></li>
+</ol>
+<h3 id="m6-4-1-">M6-4-1. 添加宝贝头像 - 选择添加头像方式<a class="headerlink" href="#m6-4-1-" title="Permanent link">&para;</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>照片需要进行圆形剪裁</p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-4-1.%20%E6%B7%BB%E5%8A%A0%E5%AE%9D%E8%B4%9D%E5%A4%B4%E5%83%8F%20-%20%E9%80%89%E6%8B%A9%E6%B7%BB%E5%8A%A0%E5%A4%B4%E5%83%8F%E6%96%B9%E5%BC%8F.jpg" /></p>
+<ol>
+<li>点击 <strong>选取照片</strong> 按钮进入系统相册</li>
+<li>点击 <strong>拍照</strong> 按钮进入系统相机</li>
+<li>点击 <strong>取消</strong> 按钮关闭 Action Sheet，返回至 <a href="./#m6-4">M6-4. 添加宝贝头像</a></li>
+<li>点击遮罩层关闭 Action Sheet，返回至 <a href="./#m6-4">M6-4. 添加宝贝头像</a></li>
+</ol>
+<h3 id="m6-5">M6-5. 激活中<a class="headerlink" href="#m6-5" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-5.%20%E6%BF%80%E6%B4%BB%E4%B8%AD.jpg" /></p>
+<ol>
+<li>分以下两种情况：<ul>
+<li>若激活成功，则进入 <a href="../../M1.设备主页/M1-1.小乐迪设备主页/M1-1.小乐迪设备主页/">M1-1. 小乐迪设备主页</a></li>
+<li>若因为手机网络原因导致激活失败，则进入 <a href="./#m6-6-1">M6-6-1. 全局网络不可用</a></li>
+</ul>
+</li>
+</ol>
+<h3 id="m6-6-1">M6-6-1. 全局网络不可用<a class="headerlink" href="#m6-6-1" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-6-1.%20%E5%85%A8%E5%B1%80%E7%BD%91%E7%BB%9C%E4%B8%8D%E5%8F%AF%E7%94%A8.jpg" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>此对话框为全局 alert，当由于网络原因造成手机无法与服务器进行交互的时候，弹出此对话框</p>
+</div>
+<ol>
+<li>点击 <strong>我知道了</strong> 按钮关闭对话框并返回前一个页面</li>
+</ol>
+<h3 id="m6-6-2">M6-6-2. 扫一扫（扫描第三方二维码）<a class="headerlink" href="#m6-6-2" title="Permanent link">&para;</a></h3>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>此提示为警告 / 错误类 toast 提示</p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-6-2.%20%E6%89%AB%E4%B8%80%E6%89%AB%EF%BC%88%E6%89%AB%E6%8F%8F%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BA%8C%E7%BB%B4%E7%A0%81%EF%BC%89.jpg" /></p>
+<ol>
+<li>提示停留 3 秒之后收起</li>
+<li>点击 <strong>关闭</strong> 按钮可以立即关闭提示，返回 <a href="./#m6-2">M6-2. 扫描二维码</a></li>
+</ol>
+<h3 id="m6-6-3-ott">M6-6-3. 扫一扫（OTT 超时）<a class="headerlink" href="#m6-6-3-ott" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-6-3.%20%E6%89%AB%E4%B8%80%E6%89%AB%EF%BC%88OTT%20%E8%B6%85%E6%97%B6%EF%BC%89.jpg" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>此对话框为全局 alert，当由于 OTT 超时导致二维码失效的时候，弹出此对话框</p>
+</div>
+<ol>
+<li>点击 <strong>我知道了</strong> 按钮返回  <a href="./#m6-2">M6-2. 扫描二维码</a></li>
+</ol>
+<h3 id="m6-6-4-">M6-6-4. 添加宝贝 - 填写昵称 - 宝贝昵称超长<a class="headerlink" href="#m6-6-4-" title="Permanent link">&para;</a></h3>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>此提示为警告 / 错误类 toast 提示</p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-6-4.%20%E6%B7%BB%E5%8A%A0%E5%AE%9D%E8%B4%9D%20-%20%E5%A1%AB%E5%86%99%E6%98%B5%E7%A7%B0%20-%20%E5%AE%9D%E8%B4%9D%E6%98%B5%E7%A7%B0%E8%B6%85%E9%95%BF.jpg" /></p>
+<ol>
+<li>提示停留 3 秒之后收起</li>
+<li>点击 <strong>关闭</strong> 按钮可以立即关闭提示，返回 <a href="./#m6-3-1-">M6-3-1. 添加宝贝 - 填写昵称</a></li>
+</ol>
+<h3 id="m6-6-5-">M6-6-5. 添加宝贝 - 填写昵称 - 宝贝昵称含有不合法字符<a class="headerlink" href="#m6-6-5-" title="Permanent link">&para;</a></h3>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>此提示为警告 / 错误类 toast 提示    </p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-6-5.%20%E6%B7%BB%E5%8A%A0%E5%AE%9D%E8%B4%9D%20-%20%E5%A1%AB%E5%86%99%E6%98%B5%E7%A7%B0%20-%20%E5%AE%9D%E8%B4%9D%E6%98%B5%E7%A7%B0%E5%90%AB%E6%9C%89%E4%B8%8D%E5%90%88%E6%B3%95%E5%AD%97%E7%AC%A6.jpg" /></p>
+<ol>
+<li>提示停留 3 秒之后收起</li>
+<li>点击 <strong>关闭</strong> 按钮可以立即关闭提示，返回 <a href="./#m6-3-1-">M6-3-1. 添加宝贝 - 填写昵称</a></li>
+</ol>
+<h3 id="m6-6-6-">M6-6-6. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系 - 宝贝关系超长<a class="headerlink" href="#m6-6-6-" title="Permanent link">&para;</a></h3>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>此提示为警告 / 错误类 toast 提示 </p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-6-6.%20%E6%B7%BB%E5%8A%A0%E5%AE%9D%E8%B4%9D%20-%20%E9%80%89%E6%8B%A9%E4%B8%8E%E5%AE%9D%E8%B4%9D%E5%85%B3%E7%B3%BB%20-%20%E8%BE%93%E5%85%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%85%B3%E7%B3%BB%20-%20%E5%AE%9D%E8%B4%9D%E5%85%B3%E7%B3%BB%E8%B6%85%E9%95%BF.jpg" /></p>
+<ol>
+<li>提示停留 3 秒之后收起</li>
+<li>点击 <strong>关闭</strong> 按钮可以立即关闭提示，返回 <a href="./#m6-3-5-">M6-3-5. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系</a></li>
+</ol>
+<h3 id="m6-6-7-">M6-6-7. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系 - 宝贝关系含有不合法字符<a class="headerlink" href="#m6-6-7-" title="Permanent link">&para;</a></h3>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>此提示为警告 / 错误类 toast 提示 </p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-6-7.%20%E6%B7%BB%E5%8A%A0%E5%AE%9D%E8%B4%9D%20-%20%E9%80%89%E6%8B%A9%E4%B8%8E%E5%AE%9D%E8%B4%9D%E5%85%B3%E7%B3%BB%20-%20%E8%BE%93%E5%85%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%85%B3%E7%B3%BB%20-%20%E5%AE%9D%E8%B4%9D%E5%85%B3%E7%B3%BB%E5%90%AB%E6%9C%89%E4%B8%8D%E5%90%88%E6%B3%95%E5%AD%97%E7%AC%A6.jpg" /></p>
+<ol>
+<li>提示停留 3 秒之后收起</li>
+<li>点击 <strong>关闭</strong> 按钮可以立即关闭提示，返回 <a href="./#m6-6-7-">M6-6-7. 添加宝贝 - 选择与宝贝关系 - 输入自定义关系</a></li>
+</ol>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../M5.宝贝设备/M5.宝贝设备/" title="M5. 宝贝设备" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                M5. 宝贝设备
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../M0-1. 登录/" title="M0-1. 登录 (Working)" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                M0-1. 登录 (Working)
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2017-2018 Auric. All rights reserved.
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.cb27f861.js"></script>
+      
+        
+        
+          
+          <script src="../../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

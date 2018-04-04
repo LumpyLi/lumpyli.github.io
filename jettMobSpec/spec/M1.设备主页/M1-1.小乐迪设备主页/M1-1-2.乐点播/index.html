@@ -1,0 +1,2393 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="奥多拉交互设计文档">
+      
+      
+        <link rel="canonical" href="http://docs.oduola.cn/design/jettMobSpec/spec/M1.设备主页/M1-1.小乐迪设备主页/M1-1-2.乐点播/">
+      
+      
+        <meta name="author" content="李广超">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../../../">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.5.4">
+    
+    
+      
+        <title>M1-1-2. 乐点播 - 奥多拉交互设计文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/application.aa3de92b.css">
+      
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../../../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="red" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#whats-new" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://docs.oduola.cn/design/" title="奥多拉交互设计文档" class="md-header-nav__button md-logo">
+          
+            <img src="../../../../../logo/logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                奥多拉交互设计文档
+              </span>
+              <span class="md-header-nav__topic">
+                M1-1-2. 乐点播
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../../.." title="Overview" class="md-tabs__link">
+        Overview
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../" title="乐迪智能 app" class="md-tabs__link md-tabs__link--active">
+          乐迪智能 app
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../../jettTV/" title="乐迪 TV 互动" class="md-tabs__link">
+          乐迪 TV 互动
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../../projectA/" title="A 项目：智能故事机" class="md-tabs__link">
+          A 项目：智能故事机
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../../jiaJiaMobDesign/" title="嘉佳智能 app" class="md-tabs__link">
+          嘉佳智能 app
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../../jettPhoneWechatSpec/" title="乐迪电话机器人" class="md-tabs__link">
+          乐迪电话机器人
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../../jettECE/" title="乐迪早教机器人" class="md-tabs__link">
+          乐迪早教机器人
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../../jettBS/" title="智能精灵 - 乐迪" class="md-tabs__link">
+          智能精灵 - 乐迪
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../../dogo/" title="导购邦" class="md-tabs__link">
+          导购邦
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../../../../logo/logo.svg" width="24" height="24">
+      
+    </span>
+    奥多拉交互设计文档
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../.." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      乐迪智能 app
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        乐迪智能 app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../" title="Home Page" class="md-nav__link">
+      Home Page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../whatsNew/" title="What's New?" class="md-nav__link">
+      What's New?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../layout/" title="Layout" class="md-nav__link">
+      Layout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" checked>
+    
+    <label class="md-nav__link" for="nav-2-4">
+      Spec
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        Spec
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../M0.登录-注册-忘记密码/" title="M0. 登录 - 注册 - 忘记密码" class="md-nav__link">
+      M0. 登录 - 注册 - 忘记密码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-2" type="checkbox" id="nav-2-4-2" checked>
+    
+    <label class="md-nav__link" for="nav-2-4-2">
+      M1. 设备主页
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-2">
+        M1. 设备主页
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-2-1" type="checkbox" id="nav-2-4-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-2-4-2-1">
+      M1-1. 小乐迪设备主页
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-4-2-1">
+        M1-1. 小乐迪设备主页
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M1-1.小乐迪设备主页/" title="M1-1. 小乐迪设备主页" class="md-nav__link">
+      M1-1. 小乐迪设备主页
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        M1-1-2. 乐点播
+      </label>
+    
+    <a href="./" title="M1-1-2. 乐点播" class="md-nav__link md-nav__link--active">
+      M1-1-2. 乐点播
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#whats-new" title="What's New?" class="md-nav__link">
+    What's New?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2017-08-09" title="2017-08-09" class="md-nav__link">
+    2017-08-09
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-07-19" title="2017-07-19" class="md-nav__link">
+    2017-07-19
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-05-10" title="2017-05-10" class="md-nav__link">
+    2017-05-10
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-04-24" title="2017-04-24" class="md-nav__link">
+    2017-04-24
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-04-17" title="2017-04-17" class="md-nav__link">
+    2017-04-17
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spec" title="Spec" class="md-nav__link">
+    Spec
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-0" title="M1-1-2-0. 资源架构" class="md-nav__link">
+    M1-1-2-0. 资源架构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-1-" title="M1-1-2-1. 乐点播 - 主页" class="md-nav__link">
+    M1-1-2-1. 乐点播 - 主页
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-2-" title="M1-1-2-2. 乐点播 - 分类列表" class="md-nav__link">
+    M1-1-2-2. 乐点播 - 分类列表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-3-" title="M1-1-2-3. 乐点播 - 专辑页面" class="md-nav__link">
+    M1-1-2-3. 乐点播 - 专辑页面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-4-" title="M1-1-2-4. 乐点播 - 专辑页面 - 点播中" class="md-nav__link">
+    M1-1-2-4. 乐点播 - 专辑页面 - 点播中
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-5-" title="M1-1-2-5. 乐点播 - 专辑页面 - 歌曲点播中" class="md-nav__link">
+    M1-1-2-5. 乐点播 - 专辑页面 - 歌曲点播中
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-6-" title="M1-1-2-6. 乐点播 - 专辑页面 - 乐迪离线" class="md-nav__link">
+    M1-1-2-6. 乐点播 - 专辑页面 - 乐迪离线
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-7-" title="M1-1-2-7. 乐点播 - 专辑页面 - 调节音量" class="md-nav__link">
+    M1-1-2-7. 乐点播 - 专辑页面 - 调节音量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-8-" title="M1-1-2-8. 乐点播 - 主页 - 歌曲点播中" class="md-nav__link">
+    M1-1-2-8. 乐点播 - 主页 - 歌曲点播中
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-9-" title="M1-1-2-9. 乐点播 - 分类列表 - 歌曲点播中" class="md-nav__link">
+    M1-1-2-9. 乐点播 - 分类列表 - 歌曲点播中
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-10-" title="M1-1-2-10. 乐点播 - 无法加载" class="md-nav__link">
+    M1-1-2-10. 乐点播 - 无法加载
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-11-" title="M1-1-2-11. 乐点播 - 无法加载 - 加载中" class="md-nav__link">
+    M1-1-2-11. 乐点播 - 无法加载 - 加载中
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-12-" title="M1-1-2-12. 乐点播 - 专辑页面 - 未绑定进行点播" class="md-nav__link">
+    M1-1-2-12. 乐点播 - 专辑页面 - 未绑定进行点播
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-13-" title="M1-1-2-13. 乐点播 - 点播失败 - 手机没有网络" class="md-nav__link">
+    M1-1-2-13. 乐点播 - 点播失败 - 手机没有网络
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-14-" title="M1-1-2-14. 乐点播 - 主页 - 设置动作" class="md-nav__link">
+    M1-1-2-14. 乐点播 - 主页 - 设置动作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-14-1-" title="M1-1-2-14-1. 乐点播 - 主页（旧版）" class="md-nav__link">
+    M1-1-2-14-1. 乐点播 - 主页（旧版）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-14-2-" title="M1-1-2-14-2. 乐点播 - 主页（旧版） - 设置动作" class="md-nav__link">
+    M1-1-2-14-2. 乐点播 - 主页（旧版） - 设置动作
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M1-1-5.网络连接/" title="M1-1-5. 网络连接" class="md-nav__link">
+      M1-1-5. 网络连接
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M1-1-6.STEAM/" title="M1-1-6. STEAM" class="md-nav__link">
+      M1-1-6. STEAM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M1-1-6.STEAM(Archived)/" title="M1-1-6. STEAM (Archived)" class="md-nav__link">
+      M1-1-6. STEAM (Archived)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-2-2" type="checkbox" id="nav-2-4-2-2">
+    
+    <label class="md-nav__link" for="nav-2-4-2-2">
+      M1-3. 小乐迪设备主页（未绑定）
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-4-2-2">
+        M1-3. 小乐迪设备主页（未绑定）
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../M1-3.小乐迪设备主页（未绑定）/M1-3.小乐迪设备主页（未绑定）/" title="M1-3. 小乐迪设备主页（未绑定）" class="md-nav__link">
+      M1-3. 小乐迪设备主页（未绑定）
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-3" type="checkbox" id="nav-2-4-3">
+    
+    <label class="md-nav__link" for="nav-2-4-3">
+      M2. 发现
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-3">
+        M2. 发现
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../M2.发现/M2.发现/" title="M2. 发现" class="md-nav__link">
+      M2. 发现
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-4" type="checkbox" id="nav-2-4-4">
+    
+    <label class="md-nav__link" for="nav-2-4-4">
+      M3. 商城
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-4">
+        M3. 商城
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../M3.商城/M3.商城/" title="M3. 商城" class="md-nav__link">
+      M3. 商城
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-5" type="checkbox" id="nav-2-4-5">
+    
+    <label class="md-nav__link" for="nav-2-4-5">
+      M4. 我的
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-5">
+        M4. 我的
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../M4.我的/M4.我的/" title="M4. 我的" class="md-nav__link">
+      M4. 我的
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-6" type="checkbox" id="nav-2-4-6">
+    
+    <label class="md-nav__link" for="nav-2-4-6">
+      M5. 宝贝设备
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-6">
+        M5. 宝贝设备
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../M5.宝贝设备/M5.宝贝设备/" title="M5. 宝贝设备" class="md-nav__link">
+      M5. 宝贝设备
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-7" type="checkbox" id="nav-2-4-7">
+    
+    <label class="md-nav__link" for="nav-2-4-7">
+      M6. 绑定流程
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-7">
+        M6. 绑定流程
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../M6.绑定流程/M6-1.小乐迪绑定流程/" title="M6-1. 小乐迪绑定流程" class="md-nav__link">
+      M6-1. 小乐迪绑定流程
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      2.5.0
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        2.5.0
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../M0-1. 登录/" title="M0-1. 登录 (Working)" class="md-nav__link">
+      M0-1. 登录 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../M0-2. 注册/" title="M0-2. 注册 (Working)" class="md-nav__link">
+      M0-2. 注册 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../M0-3. 忘记密码/" title="M0-3. 忘记密码 (Working)" class="md-nav__link">
+      M0-3. 忘记密码 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../M0-4. 绑定/" title="M0-4. 绑定 (Working)" class="md-nav__link">
+      M0-4. 绑定 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../M1. 内容/" title="M1. 内容" class="md-nav__link">
+      M1. 内容
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-6" type="checkbox" id="nav-2-5-6">
+    
+    <label class="md-nav__link" for="nav-2-5-6">
+      M2. 技能
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-5-6">
+        M2. 技能
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../M2. 技能/M2. 技能/" title="M2. 技能 (Working)" class="md-nav__link">
+      M2. 技能 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../M2. 技能/M2-1. 扫一扫连网/" title="M2-1. 扫一扫连网 (Working)" class="md-nav__link">
+      M2-1. 扫一扫连网 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../M2. 技能/M2-2. 切换机器人/" title="M2-2. 切换机器人" class="md-nav__link">
+      M2-2. 切换机器人
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../M2. 技能/M2-3. STEAM 编程/" title="M2-3. STEAM 编程 (Working)" class="md-nav__link">
+      M2-3. STEAM 编程 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../M2. 技能/M2-4. 帮我说/" title="M2-4. 帮我说 (Working)" class="md-nav__link">
+      M2-4. 帮我说 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../M2. 技能/M2-5. 防沉迷/" title="M2-5. 防沉迷 (Working)" class="md-nav__link">
+      M2-5. 防沉迷 (Working)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../M3. 发现/" title="M3. 发现（Working）" class="md-nav__link">
+      M3. 发现（Working）
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../M4. 我的/" title="M4. 我的（Working）" class="md-nav__link">
+      M4. 我的（Working）
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      乐迪 TV 互动
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        乐迪 TV 互动
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettTV/" title="Home Page" class="md-nav__link">
+      Home Page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettTV/Changelog/" title="Changelog" class="md-nav__link">
+      Changelog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Spec
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        Spec
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettTV/spec/TX-1. 启动页&首次连接设备检测/" title="TX-1. 启动页 & 首次连接设备检测" class="md-nav__link">
+      TX-1. 启动页 & 首次连接设备检测
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettTV/spec/TX-2. 网络及设备检测/" title="TX-2. 网络及设备检测" class="md-nav__link">
+      TX-2. 网络及设备检测
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettTV/spec/T1. 主页/" title="T1. 主页" class="md-nav__link">
+      T1. 主页
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettTV/spec/T2. 关卡/" title="T2. 关卡" class="md-nav__link">
+      T2. 关卡
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettTV/spec/T3. Intro 动画及起飞相关/" title="T3. Intro 动画及起飞相关" class="md-nav__link">
+      T3. Intro 动画及起飞相关
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-6" type="checkbox" id="nav-3-3-6">
+    
+    <label class="md-nav__link" for="nav-3-3-6">
+      T4. 游戏
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-6">
+        T4. 游戏
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettTV/spec/T4-1. 游戏交互 - 选择题/" title="T4-1. 游戏交互 - 选择题" class="md-nav__link">
+      T4-1. 游戏交互 - 选择题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettTV/spec/T4-2. 游戏交互 - 跟读题/" title="T4-2. 游戏交互 - 跟读题" class="md-nav__link">
+      T4-2. 游戏交互 - 跟读题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettTV/spec/T4-3. 游戏交互 - 叫飞侠帮忙/" title="T4-3. 游戏交互 - 叫飞侠帮忙" class="md-nav__link">
+      T4-3. 游戏交互 - 叫飞侠帮忙
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettTV/spec/T4-4. 游戏交互 - 叫口号/" title="T4-4. 游戏交互 - 叫口号" class="md-nav__link">
+      T4-4. 游戏交互 - 叫口号
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettTV/spec/T4-5. [全局] - 退出游戏/" title="T4-5. [全局] - 退出游戏" class="md-nav__link">
+      T4-5. [全局] - 退出游戏
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettTV/spec/T4-6. 闯关成功提示/" title="T4-6. 闯关成功提示" class="md-nav__link">
+      T4-6. 闯关成功提示
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettTV/spec/T4-7. 获得游戏勋章/" title="T4-7. 获得游戏勋章" class="md-nav__link">
+      T4-7. 获得游戏勋章
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      A 项目：智能故事机
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        A 项目：智能故事机
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../projectA/" title="Home Page" class="md-nav__link">
+      Home Page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      PRD
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        PRD
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../projectA/prd/Changelog/" title="Changelog" class="md-nav__link">
+      Changelog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../projectA/prd/prd/" title="PRD" class="md-nav__link">
+      PRD
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Spec
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        Spec
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../projectA/spec/changelog/" title="Changelog" class="md-nav__link">
+      Changelog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../projectA/spec/MX-1. 登录/" title="MX-1. 登录" class="md-nav__link">
+      MX-1. 登录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../projectA/spec/MX-2. 配网/" title="MX-2. 配网" class="md-nav__link">
+      MX-2. 配网
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../projectA/spec/M1. 内容/" title="M1. 内容" class="md-nav__link">
+      M1. 内容
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../projectA/spec/M2. 语聊/" title="M2. 语聊" class="md-nav__link">
+      M2. 语聊
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../projectA/spec/M3. 技能/" title="M3. 技能" class="md-nav__link">
+      M3. 技能
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../projectA/spec/M4. 我的/" title="M4. 我的" class="md-nav__link">
+      M4. 我的
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      嘉佳智能 app
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        嘉佳智能 app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      视觉稿
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        视觉稿
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jiaJiaMobDesign/" title="登录／注册／激活流程" class="md-nav__link">
+      登录／注册／激活流程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jiaJiaMobDesign/shake/" title="摇一摇" class="md-nav__link">
+      摇一摇
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      乐迪电话机器人
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        乐迪电话机器人
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettPhoneWechatSpec/" title="导航" class="md-nav__link">
+      导航
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      乐迪早教机器人
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        乐迪早教机器人
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettECE/" title="Home Page" class="md-nav__link">
+      Home Page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettECE/whatsNew/" title="What's New?" class="md-nav__link">
+      What's New?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      Spec
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        Spec
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettECE/spec/M1.语音交互/" title="M1. 语音交互" class="md-nav__link">
+      M1. 语音交互
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettECE/spec/M2.音频点播/" title="M2. 音频点播" class="md-nav__link">
+      M2. 音频点播
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      智能精灵 - 乐迪
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        智能精灵 - 乐迪
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettBS/" title="Home Page" class="md-nav__link">
+      Home Page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettBS/whatsNew/" title="What's New" class="md-nav__link">
+      What's New
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../jettBS/Resource/" title="Resource" class="md-nav__link">
+      Resource
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      导购邦
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        导购邦
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../dogo/" title="Home Page" class="md-nav__link">
+      Home Page
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#whats-new" title="What's New?" class="md-nav__link">
+    What's New?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2017-08-09" title="2017-08-09" class="md-nav__link">
+    2017-08-09
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-07-19" title="2017-07-19" class="md-nav__link">
+    2017-07-19
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-05-10" title="2017-05-10" class="md-nav__link">
+    2017-05-10
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-04-24" title="2017-04-24" class="md-nav__link">
+    2017-04-24
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-04-17" title="2017-04-17" class="md-nav__link">
+    2017-04-17
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spec" title="Spec" class="md-nav__link">
+    Spec
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-0" title="M1-1-2-0. 资源架构" class="md-nav__link">
+    M1-1-2-0. 资源架构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-1-" title="M1-1-2-1. 乐点播 - 主页" class="md-nav__link">
+    M1-1-2-1. 乐点播 - 主页
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-2-" title="M1-1-2-2. 乐点播 - 分类列表" class="md-nav__link">
+    M1-1-2-2. 乐点播 - 分类列表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-3-" title="M1-1-2-3. 乐点播 - 专辑页面" class="md-nav__link">
+    M1-1-2-3. 乐点播 - 专辑页面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-4-" title="M1-1-2-4. 乐点播 - 专辑页面 - 点播中" class="md-nav__link">
+    M1-1-2-4. 乐点播 - 专辑页面 - 点播中
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-5-" title="M1-1-2-5. 乐点播 - 专辑页面 - 歌曲点播中" class="md-nav__link">
+    M1-1-2-5. 乐点播 - 专辑页面 - 歌曲点播中
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-6-" title="M1-1-2-6. 乐点播 - 专辑页面 - 乐迪离线" class="md-nav__link">
+    M1-1-2-6. 乐点播 - 专辑页面 - 乐迪离线
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-7-" title="M1-1-2-7. 乐点播 - 专辑页面 - 调节音量" class="md-nav__link">
+    M1-1-2-7. 乐点播 - 专辑页面 - 调节音量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-8-" title="M1-1-2-8. 乐点播 - 主页 - 歌曲点播中" class="md-nav__link">
+    M1-1-2-8. 乐点播 - 主页 - 歌曲点播中
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-9-" title="M1-1-2-9. 乐点播 - 分类列表 - 歌曲点播中" class="md-nav__link">
+    M1-1-2-9. 乐点播 - 分类列表 - 歌曲点播中
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-10-" title="M1-1-2-10. 乐点播 - 无法加载" class="md-nav__link">
+    M1-1-2-10. 乐点播 - 无法加载
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-11-" title="M1-1-2-11. 乐点播 - 无法加载 - 加载中" class="md-nav__link">
+    M1-1-2-11. 乐点播 - 无法加载 - 加载中
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-12-" title="M1-1-2-12. 乐点播 - 专辑页面 - 未绑定进行点播" class="md-nav__link">
+    M1-1-2-12. 乐点播 - 专辑页面 - 未绑定进行点播
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-13-" title="M1-1-2-13. 乐点播 - 点播失败 - 手机没有网络" class="md-nav__link">
+    M1-1-2-13. 乐点播 - 点播失败 - 手机没有网络
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-14-" title="M1-1-2-14. 乐点播 - 主页 - 设置动作" class="md-nav__link">
+    M1-1-2-14. 乐点播 - 主页 - 设置动作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-14-1-" title="M1-1-2-14-1. 乐点播 - 主页（旧版）" class="md-nav__link">
+    M1-1-2-14-1. 乐点播 - 主页（旧版）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m1-1-2-14-2-" title="M1-1-2-14-2. 乐点播 - 主页（旧版） - 设置动作" class="md-nav__link">
+    M1-1-2-14-2. 乐点播 - 主页（旧版） - 设置动作
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>M1-1-2. 乐点播</h1>
+                
+                <h2 id="whats-new">What's New?<a class="headerlink" href="#whats-new" title="Permanent link">&para;</a></h2>
+<h3 id="2017-08-09">2017-08-09<a class="headerlink" href="#2017-08-09" title="Permanent link">&para;</a></h3>
+<ul>
+<li>新增控制点播歌曲时是否跳舞的开关，详见 <a href="#m1-1-2-1-"> M1-1-2-1. 乐点播 - 主页 </a> 和 <a href="#m1-1-2-14-1-"> M1-1-2-14-1. 乐点播 - 主页（旧版） </a></li>
+</ul>
+<h3 id="2017-07-19">2017-07-19<a class="headerlink" href="#2017-07-19" title="Permanent link">&para;</a></h3>
+<ul>
+<li>由于乐点播属于点对点播放，不经过服务器，所以替换 ** M1-1-2-6. 乐点播 - 专辑页面 - 点播失败** 成 <a href="#m1-1-2-6-"> M1-1-2-6. 乐点播 - 专辑页面 - 乐迪离线 </a></li>
+<li>增加手机断网的描述，见 <a href="#m1-1-2-13-"> M1-1-2-13. 乐点播 - 点播失败 - 手机没有网络 </a></li>
+</ul>
+<h3 id="2017-05-10">2017-05-10<a class="headerlink" href="#2017-05-10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>新增未绑定时进行点播的判断，见 <a href="#m1-1-2-3-">M1-1-2-3. 乐点播 - 专辑页面</a> 和 <a href="#m1-1-2-12-">M1-1-2-12. 乐点播 - 专辑页面 - 未绑定进行点播</a></li>
+</ul>
+<h3 id="2017-04-24">2017-04-24<a class="headerlink" href="#2017-04-24" title="Permanent link">&para;</a></h3>
+<ul>
+<li>增加下载全部 Spec 图片的 <a href="#spec">链接</a></li>
+</ul>
+<h3 id="2017-04-17">2017-04-17<a class="headerlink" href="#2017-04-17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>首次提交</li>
+</ul>
+<hr />
+<h2 id="spec">Spec<a class="headerlink" href="#spec" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>下载全部 Spec 图片 <a href="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1-2.%E4%B9%90%E7%82%B9%E6%92%AD/%5BjettMOB%5DM1-1-2.%E4%B9%90%E7%82%B9%E6%92%AD.zip">Update: 2017-08-09</a></p>
+</div>
+<h3 id="m1-1-2-0">M1-1-2-0. 资源架构<a class="headerlink" href="#m1-1-2-0" title="Permanent link">&para;</a></h3>
+<p>此页面用于列举当前乐点播的资源架构：</p>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1-2.%E4%B9%90%E7%82%B9%E6%92%AD/M1-1-2-0.%20%E8%B5%84%E6%BA%90.jpg" /></p>
+<ol>
+<li>
+<p>资源分类</p>
+<ul>
+<li>每个分类至少包含 1 张专辑资源</li>
+<li>分类支持后台增删、排序及配置图标</li>
+</ul>
+</li>
+<li>
+<p>推荐列表</p>
+<ul>
+<li>推荐列表包含专辑资源</li>
+<li>推荐列表支持后台增删、排序及配置不同的专辑（包含专辑幅度在 3 - 10 之间）</li>
+</ul>
+</li>
+<li>
+<p>专辑</p>
+<ul>
+<li>每张专辑至少包含 1 个音频文件</li>
+<li>专辑支持后台增删、音频排序、配置封面图片、修改专辑名字及作者</li>
+</ul>
+</li>
+</ol>
+<h3 id="m1-1-2-1-">M1-1-2-1. 乐点播 - 主页<a class="headerlink" href="#m1-1-2-1-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1-2.%E4%B9%90%E7%82%B9%E6%92%AD/M1-1-2-1.%20%E4%B9%90%E7%82%B9%E6%92%AD%20-%20%E4%B8%BB%E9%A1%B5.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回至 <a href="../M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5">M1-1. 小乐迪设备主页</a></li>
+<li>资源分类，点击分类进入 <a href="#m1-1-2-2">M1-1-2-2. 乐点播 - 分类列表</a></li>
+<li>显示不同的推荐列表</li>
+<li>显示推荐列表里面的专辑，包含专辑封面及专辑名称，可以左右滑动查看该推荐列表里面的所有专辑。点击 <strong>专辑</strong> 进入 <a href="#m1-1-2-3">M1-1-2-3. 乐点播 - 专辑页面</a></li>
+<li>点击 <strong>设置</strong> 按钮进入 <a href="#m-1-1-2-14-"> M1-1-2-14. 乐点播 - 主页 - 设置动作 </a>，并由于乐点播尚未改版，旧版主页见 <a href="#m1-1-2-14-1-"> M1-1-2-14-1. 乐点播 - 主页（旧版） </a></li>
+</ol>
+<h3 id="m1-1-2-2-">M1-1-2-2. 乐点播 - 分类列表<a class="headerlink" href="#m1-1-2-2-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1-2.%E4%B9%90%E7%82%B9%E6%92%AD/M1-1-2-2.%20%E4%B9%90%E7%82%B9%E6%92%AD%20-%20%E5%88%86%E7%B1%BB%E5%88%97%E8%A1%A8.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回至 <a href="#m1-1-2-1-">M1-1-2-1. 乐点播 - 主页</a></li>
+<li>显示 <strong>资源分类</strong> 标题，动态变化</li>
+<li>显示 <strong>资源分类</strong> 下的所有专辑（分页加载 10 条 / 页），每条专辑显示专辑封面、专辑名字和作者，列表支持 <strong>下拉刷新</strong></li>
+<li>点击单条专辑列表进入 <a href="#m1-1-2-3-">M1-1-2-3. 乐点播 - 专辑页面</a></li>
+</ol>
+<h3 id="m1-1-2-3-">M1-1-2-3. 乐点播 - 专辑页面<a class="headerlink" href="#m1-1-2-3-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1-2.%E4%B9%90%E7%82%B9%E6%92%AD/M1-1-2-3.%20%E4%B9%90%E7%82%B9%E6%92%AD%20-%20%E4%B8%93%E8%BE%91%E9%A1%B5%E9%9D%A2.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回至前一个页面，区分 <a href="#m1-1-2-1-">M1-1-2-1. 乐点播 - 主页</a> 和 <a href="#m1-1-2-2">M1-1-2-2. 分类列表</a></li>
+<li>显示专辑封面、专辑名字和作者</li>
+<li>显示专辑内的音频列表，列表支持 <strong>下拉刷新</strong>。包含音频名字和音频时长。点击单条音频进行以下判断：<ul>
+<li>若 MOB 已与 RBT 绑定，点击音频即可推送点播，见 <a href="#m1-1-2-4-">M1-1-2-4. 乐点播 - 专辑页面 - 点播中</a></li>
+<li>若 MOB 未与 RBT 绑定，点击音频弹出绑定的提示框，见 <a href="#m1-1-2-12-">M1-1-2-12. 乐点播 - 专辑页面 - 未绑定进行点播</a></li>
+</ul>
+</li>
+</ol>
+<h3 id="m1-1-2-4-">M1-1-2-4. 乐点播 - 专辑页面 - 点播中<a class="headerlink" href="#m1-1-2-4-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1-2.%E4%B9%90%E7%82%B9%E6%92%AD/M1-1-2-4.%20%E4%B9%90%E7%82%B9%E6%92%AD%20-%20%E4%B8%93%E8%BE%91%E9%A1%B5%E9%9D%A2%20-%20%E7%82%B9%E6%92%AD%E4%B8%AD.jpg" /></p>
+<ol>
+<li>进行推送点播中<ul>
+<li>若点播成功，则进入 <a href="#m1-1-2-5-">M1-1-2-5. 乐点播 - 专辑页面 - 歌曲点播中</a></li>
+<li>若乐迪不在线（网络断开），则进入 <a href="#m1-1-2-6-"> M1-1-2-6. 乐点播 - 专辑页面 - 乐迪离线 </a></li>
+<li>若手机离线，则进入 <a href="#m1-1-2-13-"> M1-1-2-13. 乐点播 - 点播失败 - 手机没有网络 </a></li>
+</ul>
+</li>
+</ol>
+<h3 id="m1-1-2-5-">M1-1-2-5. 乐点播 - 专辑页面 - 歌曲点播中<a class="headerlink" href="#m1-1-2-5-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1-2.%E4%B9%90%E7%82%B9%E6%92%AD/M1-1-2-5.%20%E4%B9%90%E7%82%B9%E6%92%AD%20-%20%E4%B8%93%E8%BE%91%E9%A1%B5%E9%9D%A2%20-%20%E6%AD%8C%E6%9B%B2%E7%82%B9%E6%92%AD%E4%B8%AD.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回至前一个页面，区分 <a href="#m1-1-2-8-">M1-1-2-8. 乐点播 - 主页 - 歌曲点播中</a> 和 <a href="#m1-1-2-9-">M1-1-2-9. 乐点播 - 分类列表 - 歌曲点播中</a></li>
+<li>显示专辑封面、专辑名字和作者</li>
+<li>显示专辑内的音频列表，列表支持 <strong>下拉刷新</strong>。包含音频名字和音频时长，点击单条音频进行推送点播，见 <a href="#m1-1-2-4-">M1-1-2-4. 乐点播 - 专辑页面 - 点播中</a>。当前点播中的音频在曲目顺序位置显示动态播放标识</li>
+<li>显示当前点播的专辑封面和曲目名字，MOB 需要知道 RBT 点播完毕，点播完毕后需要收起控制播放条</li>
+<li>点击对点播歌曲进行 <strong>暂停</strong> 或 <strong>播放</strong> 的设定</li>
+<li>点击对 RBT 的音量进行设置，见 <a href="#m1-1-2-7-">M1-1-2-7. 乐点播 - 专辑页面 - 调节音量</a></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>播放控制条</strong> 为乐点播全局通用</p>
+</div>
+<h3 id="m1-1-2-6-">M1-1-2-6. 乐点播 - 专辑页面 - 乐迪离线<a class="headerlink" href="#m1-1-2-6-" title="Permanent link">&para;</a></h3>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>此提示为警告 / 错误类 toast 提示</p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1-2.%E4%B9%90%E7%82%B9%E6%92%AD/M1-1-2-6.%20%E4%B9%90%E7%82%B9%E6%92%AD%20-%20%E4%B8%93%E8%BE%91%E9%A1%B5%E9%9D%A2%20-%20%E4%B9%90%E8%BF%AA%E7%A6%BB%E7%BA%BF.jpg" /></p>
+<ol>
+<li>提示停留 3 秒之后收起</li>
+<li>点击 <strong>关闭</strong> 按钮可以立即关闭提示，返回 <a href="#m1-1-2-3-">M1-1-2-3. 乐点播 - 专辑页面</a></li>
+</ol>
+<h3 id="m1-1-2-7-">M1-1-2-7. 乐点播 - 专辑页面 - 调节音量<a class="headerlink" href="#m1-1-2-7-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1-2.%E4%B9%90%E7%82%B9%E6%92%AD/M1-1-2-7.%20%E4%B9%90%E7%82%B9%E6%92%AD%20-%20%E4%B8%93%E8%BE%91%E9%A1%B5%E9%9D%A2%20-%20%E8%B0%83%E8%8A%82%E9%9F%B3%E9%87%8F.jpg" /></p>
+<ol>
+<li>点击进行音量大小调整</li>
+<li>点击 <strong>音量</strong> 按钮关闭音量调节，返回 <a href="#m1-1-2-5-">M1-1-2-5. 乐点播 - 专辑页面 - 歌曲点播中</a></li>
+<li>点击屏幕任意位置关闭音量调节，返回 <a href="#m1-1-2-5-">M1-1-2-5. 乐点播 - 专辑页面 - 歌曲点播中</a></li>
+</ol>
+<h3 id="m1-1-2-8-">M1-1-2-8. 乐点播 - 主页 - 歌曲点播中<a class="headerlink" href="#m1-1-2-8-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1-2.%E4%B9%90%E7%82%B9%E6%92%AD/M1-1-2-8.%20%E4%B9%90%E7%82%B9%E6%92%AD%20-%20%E4%B8%BB%E9%A1%B5%20-%20%E6%AD%8C%E6%9B%B2%E7%82%B9%E6%92%AD%E4%B8%AD.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回至 <a href="../M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5">M1-1. 小乐迪设备主页</a></li>
+<li>资源分类，点击分类进入 <a href="#m1-1-2-9-">M1-1-2-9. 乐点播 - 分类列表 - 歌曲点播中</a></li>
+<li>显示不同的推荐列表</li>
+<li>显示推荐列表里面的专辑，包含专辑封面及专辑名称，可以左右滑动查看该推荐列表里面的所有专辑。点击 <strong>专辑</strong> 进入 <a href="#m1-1-2-5-">M1-1-2-5. 乐点播 - 专辑页面 - 歌曲点播中</a></li>
+<li>音量播放控制条为乐点播功能全局通用，具体交互见 <a href="#m1-1-2-5-">M1-1-2-5. 乐点播 - 专辑页面 - 歌曲点播中</a> 和 <a href="#m1-1-2-7-">M1-1-2-7. 乐点播 - 专辑页面 - 调节音量</a></li>
+</ol>
+<h3 id="m1-1-2-9-">M1-1-2-9. 乐点播 - 分类列表 - 歌曲点播中<a class="headerlink" href="#m1-1-2-9-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1-2.%E4%B9%90%E7%82%B9%E6%92%AD/M1-1-2-9.%20%E4%B9%90%E7%82%B9%E6%92%AD%20-%20%E5%88%86%E7%B1%BB%E5%88%97%E8%A1%A8%20-%20%E6%AD%8C%E6%9B%B2%E7%82%B9%E6%92%AD%E4%B8%AD.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回至 <a href="#m1-1-2-8-">M1-1-2-8. 乐点播 - 主页 - 歌曲点播中</a></li>
+<li>显示 <strong>资源分类</strong> 标题，动态变化</li>
+<li>显示 <strong>资源分类</strong> 下的所有专辑（分页加载 10 条 / 页），每条专辑显示专辑封面、专辑名字和作者，列表支持 <strong>下拉刷新</strong></li>
+<li>点击单条专辑列表进入 <a href="#m1-1-2-4-">M1-1-2-4. 乐点播 - 专辑页面 - 点播中</a></li>
+<li>音量播放控制条为乐点播功能全局通用，具体交互见 <a href="#m1-1-2-5-">M1-1-2-5. 乐点播 - 专辑页面 - 歌曲点播中</a> 和 <a href="#m1-1-2-7-">M1-1-2-7. 乐点播 - 专辑页面 - 调节音量</a></li>
+</ol>
+<h3 id="m1-1-2-10-">M1-1-2-10. 乐点播 - 无法加载<a class="headerlink" href="#m1-1-2-10-" title="Permanent link">&para;</a></h3>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>当页面出现加载内容失败，出现此页面</p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1-2.%E4%B9%90%E7%82%B9%E6%92%AD/M1-1-2-10.%20%E4%B9%90%E7%82%B9%E6%92%AD%20-%20%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回前一个页面</li>
+<li>显示当前页面标题，动态变化</li>
+<li>点击 <strong>点击刷新</strong> 按钮尝试重新加载页面，进入 <a href="#m1-1-2-11-">M1-1-2-11. 乐点播 - 无法加载 - 加载中</a></li>
+</ol>
+<h3 id="m1-1-2-11-">M1-1-2-11. 乐点播 - 无法加载 - 加载中<a class="headerlink" href="#m1-1-2-11-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1-2.%E4%B9%90%E7%82%B9%E6%92%AD/M1-1-2-11.%20%E4%B9%90%E7%82%B9%E6%92%AD%20-%20%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%20-%20%E5%8A%A0%E8%BD%BD%E4%B8%AD.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回前一个页面</li>
+<li>显示当前页面标题，动态变化</li>
+<li>尝试重新加载页面<ul>
+<li>若加载成功则显示当前页面信息，页面内容根据实际动态变化</li>
+<li>加载失败继续显示加载失败的信息，返回至 <a href="#m1-1-2-11-">M1-1-2-10. 乐点播 - 无法加载</a></li>
+</ul>
+</li>
+</ol>
+<h3 id="m1-1-2-12-">M1-1-2-12. 乐点播 - 专辑页面 - 未绑定进行点播<a class="headerlink" href="#m1-1-2-12-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1-2.%E4%B9%90%E7%82%B9%E6%92%AD/M1-1-2-12.%20%E4%B9%90%E7%82%B9%E6%92%AD%20-%20%E4%B8%93%E8%BE%91%E9%A1%B5%E9%9D%A2%20-%20%E6%9C%AA%E7%BB%91%E5%AE%9A%E8%BF%9B%E8%A1%8C%E7%82%B9%E6%92%AD.jpg" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>当 MOB 未绑定 RBT 的时候进行点播操作，弹出此对话框</p>
+</div>
+<ol>
+<li>点击 <strong>去绑定</strong> 按钮进入绑定流程，见 <a href="../../../M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B">M6-1. 小乐迪绑定流程</a></li>
+<li>点击 <strong>取消</strong> 按钮关闭 alert，返回 <a href="#m1-1-2-3-">M1-1-2-3. 乐点播 - 专辑页面</a></li>
+</ol>
+<h3 id="m1-1-2-13-">M1-1-2-13. 乐点播 - 点播失败 - 手机没有网络<a class="headerlink" href="#m1-1-2-13-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1-2.%E4%B9%90%E7%82%B9%E6%92%AD/M1-1-2-13.%20%E4%B9%90%E7%82%B9%E6%92%AD%20-%20%E7%82%B9%E6%92%AD%E5%A4%B1%E8%B4%A5%20-%20%E6%89%8B%E6%9C%BA%E6%B2%A1%E6%9C%89%E7%BD%91%E7%BB%9C.jpg" /></p>
+<ol>
+<li>点击 <strong>我知道了</strong> 按钮关闭 Alert 并返回至 <a href="#m1-1-2-3-"> M1-1-2-3. 乐点播 - 专辑页面 </a></li>
+</ol>
+<h3 id="m1-1-2-14-">M1-1-2-14. 乐点播 - 主页 - 设置动作<a class="headerlink" href="#m1-1-2-14-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1-2.%E4%B9%90%E7%82%B9%E6%92%AD/M1-1-2-14.%20%E4%B9%90%E7%82%B9%E6%92%AD%20-%20%E4%B8%BB%E9%A1%B5%20-%20%E8%AE%BE%E7%BD%AE%E5%8A%A8%E4%BD%9C.jpg" /></p>
+<ol>
+<li>点击 <strong>关闭</strong> 按钮返回至 <a href="#m1-1-2-1-"> M1-1-2-1. 乐点播 - 主页 </a></li>
+<li>点击 Switch 开关可以控制点播时乐迪是否跳舞，默认关闭，即默认状态下，点播歌曲小乐迪不会跳舞（定制歌曲不受影响，如《青春修炼手册》）</li>
+</ol>
+<h3 id="m1-1-2-14-1-">M1-1-2-14-1. 乐点播 - 主页（旧版）<a class="headerlink" href="#m1-1-2-14-1-" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>和 <a href="#m1-1-2-1-">M1-1-2-1. 乐点播 - 主页</a> 交互一样</p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1-2.%E4%B9%90%E7%82%B9%E6%92%AD/M1-1-2-14-1.%20%E4%B9%90%E7%82%B9%E6%92%AD%20-%20%E4%B8%BB%E9%A1%B5%EF%BC%88%E6%97%A7%E7%89%88%EF%BC%89.jpg" /></p>
+<h3 id="m1-1-2-14-2-">M1-1-2-14-2. 乐点播 - 主页（旧版） - 设置动作<a class="headerlink" href="#m1-1-2-14-2-" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>和 <a href="#m1-1-2-14-">M1-1-2-14. 乐点播 - 主页 - 设置动作</a> 交互一样</p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1-2.%E4%B9%90%E7%82%B9%E6%92%AD/M1-1-2-14-2.%20%E4%B9%90%E7%82%B9%E6%92%AD%20-%20%E4%B8%BB%E9%A1%B5%EF%BC%88%E6%97%A7%E7%89%88%EF%BC%89%20-%20%E8%AE%BE%E7%BD%AE%E5%8A%A8%E4%BD%9C.jpg" /></p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../M1-1.小乐迪设备主页/" title="M1-1. 小乐迪设备主页" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                M1-1. 小乐迪设备主页
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../M1-1-5.网络连接/" title="M1-1-5. 网络连接" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                M1-1-5. 网络连接
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2017-2018 Auric. All rights reserved.
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../../assets/javascripts/application.cb27f861.js"></script>
+      
+        
+        
+          
+          <script src="../../../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../../../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../../../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../../../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

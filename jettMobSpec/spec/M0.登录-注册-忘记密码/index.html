@@ -1,0 +1,2798 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="奥多拉交互设计文档">
+      
+      
+        <link rel="canonical" href="http://docs.oduola.cn/design/jettMobSpec/spec/M0.登录-注册-忘记密码/">
+      
+      
+        <meta name="author" content="李广超">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.5.4">
+    
+    
+      
+        <title>M0. 登录 - 注册 - 忘记密码 - 奥多拉交互设计文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.aa3de92b.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="red" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#whats-new" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://docs.oduola.cn/design/" title="奥多拉交互设计文档" class="md-header-nav__button md-logo">
+          
+            <img src="../../../logo/logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                奥多拉交互设计文档
+              </span>
+              <span class="md-header-nav__topic">
+                M0. 登录 - 注册 - 忘记密码
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../.." title="Overview" class="md-tabs__link">
+        Overview
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../" title="乐迪智能 app" class="md-tabs__link md-tabs__link--active">
+          乐迪智能 app
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../jettTV/" title="乐迪 TV 互动" class="md-tabs__link">
+          乐迪 TV 互动
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../projectA/" title="A 项目：智能故事机" class="md-tabs__link">
+          A 项目：智能故事机
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../jiaJiaMobDesign/" title="嘉佳智能 app" class="md-tabs__link">
+          嘉佳智能 app
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../jettPhoneWechatSpec/" title="乐迪电话机器人" class="md-tabs__link">
+          乐迪电话机器人
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../jettECE/" title="乐迪早教机器人" class="md-tabs__link">
+          乐迪早教机器人
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../jettBS/" title="智能精灵 - 乐迪" class="md-tabs__link">
+          智能精灵 - 乐迪
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../dogo/" title="导购邦" class="md-tabs__link">
+          导购邦
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../../logo/logo.svg" width="24" height="24">
+      
+    </span>
+    奥多拉交互设计文档
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      乐迪智能 app
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        乐迪智能 app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="Home Page" class="md-nav__link">
+      Home Page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../whatsNew/" title="What's New?" class="md-nav__link">
+      What's New?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../layout/" title="Layout" class="md-nav__link">
+      Layout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" checked>
+    
+    <label class="md-nav__link" for="nav-2-4">
+      Spec
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        Spec
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        M0. 登录 - 注册 - 忘记密码
+      </label>
+    
+    <a href="./" title="M0. 登录 - 注册 - 忘记密码" class="md-nav__link md-nav__link--active">
+      M0. 登录 - 注册 - 忘记密码
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#whats-new" title="What's New?" class="md-nav__link">
+    What's New?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2017-08-04" title="2017-08-04" class="md-nav__link">
+    2017-08-04
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-07-27" title="2017-07-27" class="md-nav__link">
+    2017-07-27
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-06-15" title="2017-06-15" class="md-nav__link">
+    2017-06-15
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-05-09" title="2017-05-09" class="md-nav__link">
+    2017-05-09
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-04-26" title="2017-04-26" class="md-nav__link">
+    2017-04-26
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-04-24" title="2017-04-24" class="md-nav__link">
+    2017-04-24
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-04-22" title="2017-04-22" class="md-nav__link">
+    2017-04-22
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-04-17" title="2017-04-17" class="md-nav__link">
+    2017-04-17
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-04-14" title="2017-04-14" class="md-nav__link">
+    2017-04-14
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-04-12" title="2017-04-12" class="md-nav__link">
+    2017-04-12
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spec" title="Spec" class="md-nav__link">
+    Spec
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#m0-1-or" title="M0-1. 登录 or 注册页面" class="md-nav__link">
+    M0-1. 登录 or 注册页面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-2" title="M0-2. 登录首页" class="md-nav__link">
+    M0-2. 登录首页
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-2-1-" title="M0-2-1. 登录 - 输入手机号码" class="md-nav__link">
+    M0-2-1. 登录 - 输入手机号码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-2-2-" title="M0-2-2. 登录 - 输入登录密码" class="md-nav__link">
+    M0-2-2. 登录 - 输入登录密码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-2-3-" title="M0-2-3. 登录 - 登录中" class="md-nav__link">
+    M0-2-3. 登录 - 登录中
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-3" title="M0-3. 注册首页" class="md-nav__link">
+    M0-3. 注册首页
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-3-1-" title="M0-3-1. 注册 - 输入手机号码" class="md-nav__link">
+    M0-3-1. 注册 - 输入手机号码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-3-2-" title="M0-3-2. 注册 - 获取验证码" class="md-nav__link">
+    M0-3-2. 注册 - 获取验证码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-3-2-1-" title="M0-3-2-1. 注册 - 验证码发送提示" class="md-nav__link">
+    M0-3-2-1. 注册 - 验证码发送提示
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-3-3-" title="M0-3-3. 注册 - 输入验证码" class="md-nav__link">
+    M0-3-3. 注册 - 输入验证码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-3-4-" title="M0-3-4. 注册 - 输入注册密码" class="md-nav__link">
+    M0-3-4. 注册 - 输入注册密码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-3-4-1-" title="M0-3-4-1. 注册 - 输入注册密码 - 密码不符合要求" class="md-nav__link">
+    M0-3-4-1. 注册 - 输入注册密码 - 密码不符合要求
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-3-4-2-" title="M0-3-4-2. 注册 - 输入注册密码 - 密码含有空格" class="md-nav__link">
+    M0-3-4-2. 注册 - 输入注册密码 - 密码含有空格
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-3-5-" title="M0-3-5. 注册 - 注册中" class="md-nav__link">
+    M0-3-5. 注册 - 注册中
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-3-6" title="M0-3-6. 用户协议" class="md-nav__link">
+    M0-3-6. 用户协议
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-4" title="M0-4. 忘记密码" class="md-nav__link">
+    M0-4. 忘记密码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-4-1-" title="M0-4-1. 忘记密码 - 手机号码未注册" class="md-nav__link">
+    M0-4-1. 忘记密码 - 手机号码未注册
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-1" title="M0-5-1. 全局网络不可用" class="md-nav__link">
+    M0-5-1. 全局网络不可用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-2" title="M0-5-2. 手机号未注册" class="md-nav__link">
+    M0-5-2. 手机号未注册
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-3" title="M0-5-3. 登录手机号格式不正确" class="md-nav__link">
+    M0-5-3. 登录手机号格式不正确
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-4" title="M0-5-4. 帐号密码不正确" class="md-nav__link">
+    M0-5-4. 帐号密码不正确
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-5" title="M0-5-5. 手机号已注册" class="md-nav__link">
+    M0-5-5. 手机号已注册
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-6" title="M0-5-6. 注册手机号格式不正确" class="md-nav__link">
+    M0-5-6. 注册手机号格式不正确
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-7" title="M0-5-7. 验证码超出每天次数" class="md-nav__link">
+    M0-5-7. 验证码超出每天次数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-8" title="M0-5-8. 手机号码被拉入黑名单" class="md-nav__link">
+    M0-5-8. 手机号码被拉入黑名单
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-9" title="M0-5-9. 验证码有误" class="md-nav__link">
+    M0-5-9. 验证码有误
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-10" title="M0-5-10. 用户协议不能加载" class="md-nav__link">
+    M0-5-10. 用户协议不能加载
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-11-" title="M0-5-11. 用户协议不能加载 - 加载中" class="md-nav__link">
+    M0-5-11. 用户协议不能加载 - 加载中
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-6" title="M0-6. 选择设备" class="md-nav__link">
+    M0-6. 选择设备
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-2" type="checkbox" id="nav-2-4-2">
+    
+    <label class="md-nav__link" for="nav-2-4-2">
+      M1. 设备主页
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-2">
+        M1. 设备主页
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-2-1" type="checkbox" id="nav-2-4-2-1">
+    
+    <label class="md-nav__link" for="nav-2-4-2-1">
+      M1-1. 小乐迪设备主页
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-4-2-1">
+        M1-1. 小乐迪设备主页
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M1.设备主页/M1-1.小乐迪设备主页/M1-1.小乐迪设备主页/" title="M1-1. 小乐迪设备主页" class="md-nav__link">
+      M1-1. 小乐迪设备主页
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M1.设备主页/M1-1.小乐迪设备主页/M1-1-2.乐点播/" title="M1-1-2. 乐点播" class="md-nav__link">
+      M1-1-2. 乐点播
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M1.设备主页/M1-1.小乐迪设备主页/M1-1-5.网络连接/" title="M1-1-5. 网络连接" class="md-nav__link">
+      M1-1-5. 网络连接
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M1.设备主页/M1-1.小乐迪设备主页/M1-1-6.STEAM/" title="M1-1-6. STEAM" class="md-nav__link">
+      M1-1-6. STEAM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M1.设备主页/M1-1.小乐迪设备主页/M1-1-6.STEAM(Archived)/" title="M1-1-6. STEAM (Archived)" class="md-nav__link">
+      M1-1-6. STEAM (Archived)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-2-2" type="checkbox" id="nav-2-4-2-2">
+    
+    <label class="md-nav__link" for="nav-2-4-2-2">
+      M1-3. 小乐迪设备主页（未绑定）
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-4-2-2">
+        M1-3. 小乐迪设备主页（未绑定）
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M1.设备主页/M1-3.小乐迪设备主页（未绑定）/M1-3.小乐迪设备主页（未绑定）/" title="M1-3. 小乐迪设备主页（未绑定）" class="md-nav__link">
+      M1-3. 小乐迪设备主页（未绑定）
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-3" type="checkbox" id="nav-2-4-3">
+    
+    <label class="md-nav__link" for="nav-2-4-3">
+      M2. 发现
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-3">
+        M2. 发现
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M2.发现/M2.发现/" title="M2. 发现" class="md-nav__link">
+      M2. 发现
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-4" type="checkbox" id="nav-2-4-4">
+    
+    <label class="md-nav__link" for="nav-2-4-4">
+      M3. 商城
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-4">
+        M3. 商城
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M3.商城/M3.商城/" title="M3. 商城" class="md-nav__link">
+      M3. 商城
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-5" type="checkbox" id="nav-2-4-5">
+    
+    <label class="md-nav__link" for="nav-2-4-5">
+      M4. 我的
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-5">
+        M4. 我的
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M4.我的/M4.我的/" title="M4. 我的" class="md-nav__link">
+      M4. 我的
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-6" type="checkbox" id="nav-2-4-6">
+    
+    <label class="md-nav__link" for="nav-2-4-6">
+      M5. 宝贝设备
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-6">
+        M5. 宝贝设备
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M5.宝贝设备/M5.宝贝设备/" title="M5. 宝贝设备" class="md-nav__link">
+      M5. 宝贝设备
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-7" type="checkbox" id="nav-2-4-7">
+    
+    <label class="md-nav__link" for="nav-2-4-7">
+      M6. 绑定流程
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-7">
+        M6. 绑定流程
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M6.绑定流程/M6-1.小乐迪绑定流程/" title="M6-1. 小乐迪绑定流程" class="md-nav__link">
+      M6-1. 小乐迪绑定流程
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      2.5.0
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        2.5.0
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M0-1. 登录/" title="M0-1. 登录 (Working)" class="md-nav__link">
+      M0-1. 登录 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M0-2. 注册/" title="M0-2. 注册 (Working)" class="md-nav__link">
+      M0-2. 注册 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M0-3. 忘记密码/" title="M0-3. 忘记密码 (Working)" class="md-nav__link">
+      M0-3. 忘记密码 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M0-4. 绑定/" title="M0-4. 绑定 (Working)" class="md-nav__link">
+      M0-4. 绑定 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M1. 内容/" title="M1. 内容" class="md-nav__link">
+      M1. 内容
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-6" type="checkbox" id="nav-2-5-6">
+    
+    <label class="md-nav__link" for="nav-2-5-6">
+      M2. 技能
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-5-6">
+        M2. 技能
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M2. 技能/M2. 技能/" title="M2. 技能 (Working)" class="md-nav__link">
+      M2. 技能 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M2. 技能/M2-1. 扫一扫连网/" title="M2-1. 扫一扫连网 (Working)" class="md-nav__link">
+      M2-1. 扫一扫连网 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M2. 技能/M2-2. 切换机器人/" title="M2-2. 切换机器人" class="md-nav__link">
+      M2-2. 切换机器人
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M2. 技能/M2-3. STEAM 编程/" title="M2-3. STEAM 编程 (Working)" class="md-nav__link">
+      M2-3. STEAM 编程 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M2. 技能/M2-4. 帮我说/" title="M2-4. 帮我说 (Working)" class="md-nav__link">
+      M2-4. 帮我说 (Working)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M2. 技能/M2-5. 防沉迷/" title="M2-5. 防沉迷 (Working)" class="md-nav__link">
+      M2-5. 防沉迷 (Working)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M3. 发现/" title="M3. 发现（Working）" class="md-nav__link">
+      M3. 发现（Working）
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../M4. 我的/" title="M4. 我的（Working）" class="md-nav__link">
+      M4. 我的（Working）
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      乐迪 TV 互动
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        乐迪 TV 互动
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettTV/" title="Home Page" class="md-nav__link">
+      Home Page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettTV/Changelog/" title="Changelog" class="md-nav__link">
+      Changelog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Spec
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        Spec
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettTV/spec/TX-1. 启动页&首次连接设备检测/" title="TX-1. 启动页 & 首次连接设备检测" class="md-nav__link">
+      TX-1. 启动页 & 首次连接设备检测
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettTV/spec/TX-2. 网络及设备检测/" title="TX-2. 网络及设备检测" class="md-nav__link">
+      TX-2. 网络及设备检测
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettTV/spec/T1. 主页/" title="T1. 主页" class="md-nav__link">
+      T1. 主页
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettTV/spec/T2. 关卡/" title="T2. 关卡" class="md-nav__link">
+      T2. 关卡
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettTV/spec/T3. Intro 动画及起飞相关/" title="T3. Intro 动画及起飞相关" class="md-nav__link">
+      T3. Intro 动画及起飞相关
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-6" type="checkbox" id="nav-3-3-6">
+    
+    <label class="md-nav__link" for="nav-3-3-6">
+      T4. 游戏
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-6">
+        T4. 游戏
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettTV/spec/T4-1. 游戏交互 - 选择题/" title="T4-1. 游戏交互 - 选择题" class="md-nav__link">
+      T4-1. 游戏交互 - 选择题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettTV/spec/T4-2. 游戏交互 - 跟读题/" title="T4-2. 游戏交互 - 跟读题" class="md-nav__link">
+      T4-2. 游戏交互 - 跟读题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettTV/spec/T4-3. 游戏交互 - 叫飞侠帮忙/" title="T4-3. 游戏交互 - 叫飞侠帮忙" class="md-nav__link">
+      T4-3. 游戏交互 - 叫飞侠帮忙
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettTV/spec/T4-4. 游戏交互 - 叫口号/" title="T4-4. 游戏交互 - 叫口号" class="md-nav__link">
+      T4-4. 游戏交互 - 叫口号
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettTV/spec/T4-5. [全局] - 退出游戏/" title="T4-5. [全局] - 退出游戏" class="md-nav__link">
+      T4-5. [全局] - 退出游戏
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettTV/spec/T4-6. 闯关成功提示/" title="T4-6. 闯关成功提示" class="md-nav__link">
+      T4-6. 闯关成功提示
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettTV/spec/T4-7. 获得游戏勋章/" title="T4-7. 获得游戏勋章" class="md-nav__link">
+      T4-7. 获得游戏勋章
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      A 项目：智能故事机
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        A 项目：智能故事机
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projectA/" title="Home Page" class="md-nav__link">
+      Home Page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      PRD
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        PRD
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projectA/prd/Changelog/" title="Changelog" class="md-nav__link">
+      Changelog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projectA/prd/prd/" title="PRD" class="md-nav__link">
+      PRD
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Spec
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        Spec
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projectA/spec/changelog/" title="Changelog" class="md-nav__link">
+      Changelog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projectA/spec/MX-1. 登录/" title="MX-1. 登录" class="md-nav__link">
+      MX-1. 登录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projectA/spec/MX-2. 配网/" title="MX-2. 配网" class="md-nav__link">
+      MX-2. 配网
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projectA/spec/M1. 内容/" title="M1. 内容" class="md-nav__link">
+      M1. 内容
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projectA/spec/M2. 语聊/" title="M2. 语聊" class="md-nav__link">
+      M2. 语聊
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projectA/spec/M3. 技能/" title="M3. 技能" class="md-nav__link">
+      M3. 技能
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projectA/spec/M4. 我的/" title="M4. 我的" class="md-nav__link">
+      M4. 我的
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      嘉佳智能 app
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        嘉佳智能 app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      视觉稿
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        视觉稿
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jiaJiaMobDesign/" title="登录／注册／激活流程" class="md-nav__link">
+      登录／注册／激活流程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jiaJiaMobDesign/shake/" title="摇一摇" class="md-nav__link">
+      摇一摇
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      乐迪电话机器人
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        乐迪电话机器人
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettPhoneWechatSpec/" title="导航" class="md-nav__link">
+      导航
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      乐迪早教机器人
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        乐迪早教机器人
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettECE/" title="Home Page" class="md-nav__link">
+      Home Page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettECE/whatsNew/" title="What's New?" class="md-nav__link">
+      What's New?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      Spec
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        Spec
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettECE/spec/M1.语音交互/" title="M1. 语音交互" class="md-nav__link">
+      M1. 语音交互
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettECE/spec/M2.音频点播/" title="M2. 音频点播" class="md-nav__link">
+      M2. 音频点播
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      智能精灵 - 乐迪
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        智能精灵 - 乐迪
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettBS/" title="Home Page" class="md-nav__link">
+      Home Page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettBS/whatsNew/" title="What's New" class="md-nav__link">
+      What's New
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jettBS/Resource/" title="Resource" class="md-nav__link">
+      Resource
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      导购邦
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        导购邦
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dogo/" title="Home Page" class="md-nav__link">
+      Home Page
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#whats-new" title="What's New?" class="md-nav__link">
+    What's New?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2017-08-04" title="2017-08-04" class="md-nav__link">
+    2017-08-04
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-07-27" title="2017-07-27" class="md-nav__link">
+    2017-07-27
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-06-15" title="2017-06-15" class="md-nav__link">
+    2017-06-15
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-05-09" title="2017-05-09" class="md-nav__link">
+    2017-05-09
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-04-26" title="2017-04-26" class="md-nav__link">
+    2017-04-26
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-04-24" title="2017-04-24" class="md-nav__link">
+    2017-04-24
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-04-22" title="2017-04-22" class="md-nav__link">
+    2017-04-22
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-04-17" title="2017-04-17" class="md-nav__link">
+    2017-04-17
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-04-14" title="2017-04-14" class="md-nav__link">
+    2017-04-14
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2017-04-12" title="2017-04-12" class="md-nav__link">
+    2017-04-12
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spec" title="Spec" class="md-nav__link">
+    Spec
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#m0-1-or" title="M0-1. 登录 or 注册页面" class="md-nav__link">
+    M0-1. 登录 or 注册页面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-2" title="M0-2. 登录首页" class="md-nav__link">
+    M0-2. 登录首页
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-2-1-" title="M0-2-1. 登录 - 输入手机号码" class="md-nav__link">
+    M0-2-1. 登录 - 输入手机号码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-2-2-" title="M0-2-2. 登录 - 输入登录密码" class="md-nav__link">
+    M0-2-2. 登录 - 输入登录密码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-2-3-" title="M0-2-3. 登录 - 登录中" class="md-nav__link">
+    M0-2-3. 登录 - 登录中
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-3" title="M0-3. 注册首页" class="md-nav__link">
+    M0-3. 注册首页
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-3-1-" title="M0-3-1. 注册 - 输入手机号码" class="md-nav__link">
+    M0-3-1. 注册 - 输入手机号码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-3-2-" title="M0-3-2. 注册 - 获取验证码" class="md-nav__link">
+    M0-3-2. 注册 - 获取验证码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-3-2-1-" title="M0-3-2-1. 注册 - 验证码发送提示" class="md-nav__link">
+    M0-3-2-1. 注册 - 验证码发送提示
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-3-3-" title="M0-3-3. 注册 - 输入验证码" class="md-nav__link">
+    M0-3-3. 注册 - 输入验证码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-3-4-" title="M0-3-4. 注册 - 输入注册密码" class="md-nav__link">
+    M0-3-4. 注册 - 输入注册密码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-3-4-1-" title="M0-3-4-1. 注册 - 输入注册密码 - 密码不符合要求" class="md-nav__link">
+    M0-3-4-1. 注册 - 输入注册密码 - 密码不符合要求
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-3-4-2-" title="M0-3-4-2. 注册 - 输入注册密码 - 密码含有空格" class="md-nav__link">
+    M0-3-4-2. 注册 - 输入注册密码 - 密码含有空格
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-3-5-" title="M0-3-5. 注册 - 注册中" class="md-nav__link">
+    M0-3-5. 注册 - 注册中
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-3-6" title="M0-3-6. 用户协议" class="md-nav__link">
+    M0-3-6. 用户协议
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-4" title="M0-4. 忘记密码" class="md-nav__link">
+    M0-4. 忘记密码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-4-1-" title="M0-4-1. 忘记密码 - 手机号码未注册" class="md-nav__link">
+    M0-4-1. 忘记密码 - 手机号码未注册
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-1" title="M0-5-1. 全局网络不可用" class="md-nav__link">
+    M0-5-1. 全局网络不可用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-2" title="M0-5-2. 手机号未注册" class="md-nav__link">
+    M0-5-2. 手机号未注册
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-3" title="M0-5-3. 登录手机号格式不正确" class="md-nav__link">
+    M0-5-3. 登录手机号格式不正确
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-4" title="M0-5-4. 帐号密码不正确" class="md-nav__link">
+    M0-5-4. 帐号密码不正确
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-5" title="M0-5-5. 手机号已注册" class="md-nav__link">
+    M0-5-5. 手机号已注册
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-6" title="M0-5-6. 注册手机号格式不正确" class="md-nav__link">
+    M0-5-6. 注册手机号格式不正确
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-7" title="M0-5-7. 验证码超出每天次数" class="md-nav__link">
+    M0-5-7. 验证码超出每天次数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-8" title="M0-5-8. 手机号码被拉入黑名单" class="md-nav__link">
+    M0-5-8. 手机号码被拉入黑名单
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-9" title="M0-5-9. 验证码有误" class="md-nav__link">
+    M0-5-9. 验证码有误
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-10" title="M0-5-10. 用户协议不能加载" class="md-nav__link">
+    M0-5-10. 用户协议不能加载
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-5-11-" title="M0-5-11. 用户协议不能加载 - 加载中" class="md-nav__link">
+    M0-5-11. 用户协议不能加载 - 加载中
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m0-6" title="M0-6. 选择设备" class="md-nav__link">
+    M0-6. 选择设备
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>M0. 登录 - 注册 - 忘记密码</h1>
+                
+                <h2 id="whats-new">What's New?<a class="headerlink" href="#whats-new" title="Permanent link">&para;</a></h2>
+<h3 id="2017-08-04">2017-08-04<a class="headerlink" href="#2017-08-04" title="Permanent link">&para;</a></h3>
+<ul>
+<li>修正 <a href="#m0-2-3-"> M0-2-3. 登录 - 登录中 </a> 中对 <strong>网络正常但未绑定设备</strong> 的判断（第二点）</li>
+</ul>
+<h3 id="2017-07-27">2017-07-27<a class="headerlink" href="#2017-07-27" title="Permanent link">&para;</a></h3>
+<ul>
+<li>避免歧义，增加对密码输入框可输入什么字符的说明，详见 <a href="#m0-3-4-">M0-3-4. 注册 - 输入注册密码</a></li>
+<li>避免歧义，增加对手机号码输入框可输入什么字符的说明，详见 <a href="#m0-3-1-">M0-3-1. 注册 - 输入手机号码</a></li>
+<li>增加对密码输入超出 32 位时的说明，详见 <a href="#m0-3-4-1-">M0-3-4-1. 注册 - 输入注册密码 - 密码不符合要求</a></li>
+</ul>
+<h3 id="2017-06-15">2017-06-15<a class="headerlink" href="#2017-06-15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>因产品需求变更，更新 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-6">M0-6. 选择设备</a> 选择设备直接进入连网流程</li>
+</ul>
+<h3 id="2017-05-09">2017-05-09<a class="headerlink" href="#2017-05-09" title="Permanent link">&para;</a></h3>
+<ul>
+<li>将 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-6">M0-6. 选择设备</a> 中小乐迪的名称修改为 <strong>乐迪益智机器人</strong></li>
+</ul>
+<h3 id="2017-04-26">2017-04-26<a class="headerlink" href="#2017-04-26" title="Permanent link">&para;</a></h3>
+<ul>
+<li>因需求变更，增加 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-6">M0-6. 选择设备</a></li>
+<li>因需求变更，修改 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2-3-">M0-2-3. 登录 - 登录中</a> 对未绑定设备的跳转页面</li>
+<li>因需求变更，修改 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2-3-">M0-3-5. 注册 - 注册中</a> 的跳转页面</li>
+</ul>
+<h3 id="2017-04-24">2017-04-24<a class="headerlink" href="#2017-04-24" title="Permanent link">&para;</a></h3>
+<ul>
+<li>增加下载全部 Spec 图片的 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#spec">链接</a></li>
+</ul>
+<h3 id="2017-04-22">2017-04-22<a class="headerlink" href="#2017-04-22" title="Permanent link">&para;</a></h3>
+<ul>
+<li>增加 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2-3-">M0-2-3. 登录 - 登录中</a> 对未填写宝贝信息时登录的判断</li>
+</ul>
+<h3 id="2017-04-17">2017-04-17<a class="headerlink" href="#2017-04-17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>调整通知类属性的<a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-2-1-">说明样式</a>，更加直观</li>
+</ul>
+<h3 id="2017-04-14">2017-04-14<a class="headerlink" href="#2017-04-14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>补充用户协议不能加载的<a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-5-10">说明</a> </li>
+<li>补充用户协议加载中的<a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-5-11-">说明</a> </li>
+</ul>
+<h3 id="2017-04-12">2017-04-12<a class="headerlink" href="#2017-04-12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>首次提交</li>
+</ul>
+<hr />
+<h2 id="spec">Spec<a class="headerlink" href="#spec" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>下载全部 Spec 图片 <a href="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/%5BjettMOB%5D%5B2017.07.27%5DM0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.zip">Update: 2017-07-27</a></p>
+</div>
+<h3 id="m0-1-or">M0-1. 登录 or 注册页面<a class="headerlink" href="#m0-1-or" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-1.%20%E7%99%BB%E5%BD%95%20or%20%E6%B3%A8%E5%86%8C%E9%A1%B5%E9%9D%A2.jpg" /></p>
+<ol>
+<li>点击 <strong>登录</strong> 按钮进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2">M0-2. 登录首页</a></li>
+<li>点击 <strong>注册</strong> 按钮进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3">M0-3. 注册首页</a></li>
+</ol>
+<h3 id="m0-2">M0-2. 登录首页<a class="headerlink" href="#m0-2" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-2.%20%E7%99%BB%E5%BD%95:%E7%99%BB%E5%BD%95%E9%A6%96%E9%A1%B5.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回至 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-1-or">M0-1. 登录 or 注册页面</a></li>
+<li>点击 <strong>手机号码</strong> 弹出 <strong>数字键盘</strong>，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md##m0-2-1-">M0-2-1. 登录 - 输入手机号码</a></li>
+<li>点击 <strong>密码</strong> 弹出 <strong>普通键盘</strong> 进行输入密码，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2-2-">M0-2-2. 登录 - 输入登录密码</a></li>
+<li>点击 <strong>切换可见</strong> 按钮切换密码可视状态，默认 <strong>不可视</strong></li>
+<li>手机号及密码输入完毕后可点击 <strong>登录</strong> 按钮进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2-3-">M0-2-3. 登录 - 登录中</a></li>
+<li>点击 <strong>注册</strong> 按钮进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3">M0-3. 注册首页</a></li>
+<li>点击 <strong>忘记密码</strong> 按钮进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-4">M0-4. 忘记密码</a></li>
+</ol>
+<h3 id="m0-2-1-">M0-2-1. 登录 - 输入手机号码<a class="headerlink" href="#m0-2-1-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-2-1.%20%E7%99%BB%E5%BD%95%20-%20%E8%BE%93%E5%85%A5%E6%89%8B%E6%9C%BA%E5%8F%B7%E7%A0%81.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回至 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-1-or">M0-1. 登录 or 注册页面</a></li>
+<li>光标定位在手机号码处，弹出数字键盘<ul>
+<li>从手机号码输入处失焦后检测到手机没有网络，则进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-5-1">M0-5-1. 全局网络不可用</a></li>
+<li>从手机号码输入处失焦后检测到帐号未注册，则进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-5-2">M0-5-2. 手机号未注册</a></li>
+<li>从手机号码输入出失焦后检测到帐号不是 11 位，则进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-5-3">M0-5-3. 手机号格式不正确</a></li>
+</ul>
+</li>
+<li>点击 <strong>密码</strong> 弹出 <strong>普通键盘</strong> 进行输入密码，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2-2-">M0-2-2. 登录 - 输入登录密码</a></li>
+<li>点击 <strong>切换可见</strong> 按钮切换密码可视状态，默认 <strong>不可视</strong></li>
+<li>手机号及密码输入完毕后可点击 <strong>登录</strong> 按钮进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2-3-">M0-2-3. 登录 - 登录中</a></li>
+<li>点击 <strong>注册</strong> 按钮进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3">M0-3. 注册首页</a></li>
+<li>点击 <strong>忘记密码</strong> 按钮进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-4">M0-4. 忘记密码</a></li>
+<li>点击屏幕空白处收起数字键盘</li>
+</ol>
+<h3 id="m0-2-2-">M0-2-2. 登录 - 输入登录密码<a class="headerlink" href="#m0-2-2-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-2-2.%20%E7%99%BB%E5%BD%95%20-%20%E8%BE%93%E5%85%A5%E7%99%BB%E5%BD%95%E5%AF%86%E7%A0%81.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回至 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-1-or">M0-1. 登录 or 注册页面</a></li>
+<li>点击 <strong>手机号码</strong> 弹出 <strong>数字键盘</strong>，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2-1-">M0-2-1. 登录 - 输入手机号码</a></li>
+<li>光标定位在密码输入处，弹出样式为 <strong>完成</strong> 的键盘</li>
+<li>点击 <strong>清除</strong> 按钮清空输入框内的内容</li>
+<li>点击 <strong>切换可见</strong> 按钮切换密码可视状态，默认 <strong>不可视</strong></li>
+<li>手机号及密码输入完毕后可点击 <strong>登录</strong> 按钮进入  <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2-3-">M0-2-3. 登录 - 登录中</a></li>
+<li>点击 <strong>注册</strong> 按钮进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3">M0-3. 注册首页</a></li>
+<li>点击 <strong>忘记密码</strong> 按钮进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-4">M0-4. 忘记密码</a></li>
+<li>点击屏幕空白处收起数字键盘</li>
+</ol>
+<h3 id="m0-2-3-">M0-2-3. 登录 - 登录中<a class="headerlink" href="#m0-2-3-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-2-3.%20%E7%99%BB%E5%BD%95%20-%20%E7%99%BB%E5%BD%95%E4%B8%AD.jpg" /></p>
+<ol>
+<li>分以下五种情况：<ul>
+<li>若网络正常并检测到已绑定对应设备，根据最新绑定的设备分别进入 <a href="../M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5.md">M1-1. 小乐迪设备主页</a> 或  <a href="../M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-2.%E5%A4%A7%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-2.%E5%A4%A7%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5.md">M1-2. 大乐迪设备主页</a></li>
+<li>若网络正常但绑定任何设备，则进入 <a href="../M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5.md">M1-1. 小乐迪设备主页</a></li>
+<li>若网络不可用则进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-5-1">M0-5-1. 全局网络不可用</a></li>
+<li>若网络正常并检测到登录密码不正确，则进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-5-4">M0-5-4. 帐号密码不正确</a></li>
+<li>若网络正常并检测到绑定时没有填写完整宝贝信息，则进入 <a href="../spec/M6.%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B/M6-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E7%BB%91%E5%AE%9A%E6%B5%81%E7%A8%8B.md#m6-7">M6-7. 添加宝贝</a></li>
+</ul>
+</li>
+</ol>
+<h3 id="m0-3">M0-3. 注册首页<a class="headerlink" href="#m0-3" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-3.%20%E6%B3%A8%E5%86%8C%E9%A6%96%E9%A1%B5.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回前一个页面，区分 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-1-or">M0-1. 登录 or 注册页面</a> 和 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2">M0-2. 登录主页</a></li>
+<li>点击进行输入手机号码，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-1-">M0-3-1. 注册 - 输入手机号码</a></li>
+<li>当输入未注册过的手机号后 <strong>获取验证码</strong> 按钮变为可点击状态，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-2-">M0-3-2. 注册 - 获取验证码</a></li>
+<li>点击输入验证码，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-3-">M0-3-3. 注册 - 输入验证码</a></li>
+<li>点击进行输入密码，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-4-">M0-3-4. 注册 - 输入注册密码</a></li>
+<li>当以上信息均填写完毕后， <strong>注册</strong> 按钮变为可点击状态，点击后进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-5-">M0-3-5. 注册 - 注册中</a></li>
+<li>点击 <strong>用户协议</strong> 按钮进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-6-">M0-3-6. 注册 - 用户协议</a></li>
+</ol>
+<h3 id="m0-3-1-">M0-3-1. 注册 - 输入手机号码<a class="headerlink" href="#m0-3-1-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-3-1.%20%E6%B3%A8%E5%86%8C%20-%20%E8%BE%93%E5%85%A5%E6%89%8B%E6%9C%BA%E5%8F%B7%E7%A0%81.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回前一个页面，区分 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-1-or">M0-1. 登录 or 注册页面</a> 和 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2">M0-2. 登录主页</a></li>
+<li>光标定位在手机号码处，弹出数字键盘，此处仅能输入数字<ul>
+<li>从手机号码输入处失焦后检测到手机没有网络，则进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-5-1">M0-5-1. 全局网络不可用</a></li>
+<li>从手机号码输入处失焦后检测到帐号已注册，则进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-5-5">M0-5-5. 手机号已注册</a></li>
+<li>从手机号码输入出失焦后检测到帐号不是 11 位，则进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-5-3">M0-5-6. 手机号格式不正确</a></li>
+</ul>
+</li>
+<li>当输入未注册过的手机号后 <strong>获取验证码</strong> 按钮变为可点击状态，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-2-">M0-3-2. 注册 - 获取验证码</a></li>
+<li>点击输入验证码，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-3-">M0-3-3. 注册 - 输入验证码</a></li>
+<li>点击进行输入密码，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-4-">M0-3-4. 注册 - 输入注册密码</a></li>
+<li>当以上信息均填写完毕后， <strong>注册</strong> 按钮变为可点击状态，点击后进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-5-">M0-3-5. 注册 - 注册中</a></li>
+<li>点击屏幕空白处收起键盘</li>
+</ol>
+<h3 id="m0-3-2-">M0-3-2. 注册 - 获取验证码<a class="headerlink" href="#m0-3-2-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-3-2.%20%E6%B3%A8%E5%86%8C%20-%20%E8%8E%B7%E5%8F%96%E9%AA%8C%E8%AF%81%E7%A0%81.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回前一个页面，区分 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-1-or">M0-1. 登录 or 注册页面</a> 和 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2">M0-2. 登录主页</a></li>
+<li>手机号码输入出失焦后检测没注册过，<strong>获取验证码</strong> 按钮变为可点击状态</li>
+<li>点击获取验证码，系统发送一条验证码信息给用户手机，并有对应提示，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-2-1-">M0-3-2-1. 注册 - 验证码发送提示</a>。<strong>获取验证码</strong> 按钮在倒计时 60 秒结束后可重新点击<ul>
+<li>若短信平台返回 <strong>获取验证码超出每天次数</strong> 的错误信息，则进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-5-7">M0-5-7. 验证码超出每天次数</a></li>
+<li>若短信平台返回 <strong>该手机号已被拉入黑名单</strong> 的错误信息，则进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-5-8">M0-5-8. 手机号码被拉入黑名单</a></li>
+</ul>
+</li>
+<li>点击输入验证码，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-3-">M0-3-3. 注册 - 输入验证码</a></li>
+<li>点击进行输入密码，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-4-">M0-3-4. 注册 - 输入注册密码</a></li>
+<li>当以上信息均填写完毕后， <strong>注册</strong> 按钮变为可点击状态，点击后进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-5-">M0-3-5. 注册 - 注册中</a></li>
+<li>点击 <strong>用户协议</strong> 按钮进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-6-">M0-3-6. 注册 - 用户协议</a></li>
+</ol>
+<h3 id="m0-3-2-1-">M0-3-2-1. 注册 - 验证码发送提示<a class="headerlink" href="#m0-3-2-1-" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>此提示为通知类 toast 提示</p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-3-2-1.%20%E6%B3%A8%E5%86%8C%20-%20%E9%AA%8C%E8%AF%81%E7%A0%81%E5%8F%91%E9%80%81%E6%8F%90%E7%A4%BA.jpg" /></p>
+<ol>
+<li>提示停留 3 秒之后收起</li>
+<li>点击 <strong>关闭</strong> 按钮可以立即关闭提示，返回 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-2">M0-3-2. 注册 - 获取验证码</a></li>
+<li>点击进行输入手机号码，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-1-">M0-3-1. 注册 - 输入手机号码</a></li>
+<li>点击进行输入密码，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-4-">M0-3-4. 注册 - 输入注册密码</a></li>
+<li><strong>获取验证码</strong> 按钮在倒计时 60 秒结束后可重新点击</li>
+<li>点击进行输入密码，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-4-">M0-3-4. 注册 - 输入注册密码</a></li>
+<li>当以上信息均填写完毕后， <strong>注册</strong> 按钮变为可点击状态，点击后进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-5-">M0-3-5. 注册 - 注册中</a></li>
+<li>点击屏幕空白位置收起键盘</li>
+</ol>
+<h3 id="m0-3-3-">M0-3-3. 注册 - 输入验证码<a class="headerlink" href="#m0-3-3-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-3-3.%20%E6%B3%A8%E5%86%8C%20-%20%E8%BE%93%E5%85%A5%E9%AA%8C%E8%AF%81%E7%A0%81.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回前一个页面，区分 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-1-or">M0-1. 登录 or 注册页面</a> 和 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2">M0-2. 登录主页</a></li>
+<li>点击进行输入手机号码，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-1-">M0-3-1. 注册 - 输入手机号码</a></li>
+<li>点击获取验证码，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-2-">M0-3-2. 注册 - 获取验证码</a></li>
+<li>光标定位在验证码输入处，弹出数字键盘</li>
+<li>点击进行输入密码，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-4-">M0-3-4. 注册 - 输入注册密码</a></li>
+<li>当以上信息均填写完毕后， <strong>注册</strong> 按钮变为可点击状态，点击后进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-5-">M0-3-5. 注册 - 注册中</a></li>
+<li>点击屏幕空白处收起键盘</li>
+</ol>
+<h3 id="m0-3-4-">M0-3-4. 注册 - 输入注册密码<a class="headerlink" href="#m0-3-4-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-3-4.%20%E6%B3%A8%E5%86%8C%20-%20%E8%BE%93%E5%85%A5%E6%B3%A8%E5%86%8C%E5%AF%86%E7%A0%81.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回前一个页面，区分 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-1-or"><strong>M0-1. 登录 or 注册页面</strong></a> 和 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2">M0-2. 登录主页</a></li>
+<li>点击进行输入手机号码，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-1-">M0-3-1. 注册 - 输入手机号码</a></li>
+<li>点击获取验证码，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-2-">M0-3-2. 注册 - 获取验证码</a></li>
+<li>点击输入验证码，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-3-">M0-3-3. 注册 - 输入验证码</a></li>
+<li>光标定位在密码输入处，弹出样式为 <strong>完成</strong> 的键盘（仅允许输入数字、英文及常见字符）。点击 <strong>切换可见</strong> 按钮切换密码可视状态，默认 <strong>不可视</strong>。密码允许输入数字、英文及常见字符（如 !@#$%^&amp;*()_+ 等，但不包括空格）<ul>
+<li>密码输入框可输入 6 - 32 个字符，当输入超过 32 个字符时，点击 <strong>注册</strong> 按钮弹出 <a href="#0-3-4-1-">M0-3-4-1. 注册 - 输入注册密码 - 密码不符合要求</a></li>
+<li>密码若含有空格，点击 <strong>注册</strong> 按钮弹出 <a href="#0-3-4-2-">M0-3-4-2. 注册 - 输入注册密码 - 密码含有空格</a></li>
+</ul>
+</li>
+<li>当以上信息均填写完毕且合乎要求后， <strong>注册</strong> 按钮变为可点击状态，点击后进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-5-">M0-3-5. 注册 - 注册中</a></li>
+<li>点击屏幕空白处收起键盘</li>
+<li>点击 <strong>完成</strong> 按钮同 <strong>注册</strong> 按钮进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-5-">M0-3-5. 注册 - 注册中</a></li>
+</ol>
+<h3 id="m0-3-4-1-">M0-3-4-1. 注册 - 输入注册密码 - 密码不符合要求<a class="headerlink" href="#m0-3-4-1-" title="Permanent link">&para;</a></h3>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>此提示为警告 / 错误类 toast 提示</p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-3-4-1.%20%E6%B3%A8%E5%86%8C%20-%20%E8%BE%93%E5%85%A5%E6%B3%A8%E5%86%8C%E5%AF%86%E7%A0%81%20-%20%E5%AF%86%E7%A0%81%E4%B8%8D%E7%AC%A6%E5%90%88%E8%A6%81%E6%B1%82.jpg" /></p>
+<ol>
+<li>提示停留 3 秒之后收起</li>
+<li>点击 <strong>关闭</strong> 按钮可以立即关闭提示，返回 <a href="#m0-3-4-">M0-3-4. 注册 - 输入注册密码</a></li>
+</ol>
+<h3 id="m0-3-4-2-">M0-3-4-2. 注册 - 输入注册密码 - 密码含有空格<a class="headerlink" href="#m0-3-4-2-" title="Permanent link">&para;</a></h3>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>此提示为警告 / 错误类 toast 提示</p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-3-4-2.%20%E6%B3%A8%E5%86%8C%20-%20%E8%BE%93%E5%85%A5%E6%B3%A8%E5%86%8C%E5%AF%86%E7%A0%81%20-%20%E5%AF%86%E7%A0%81%E5%90%AB%E6%9C%89%E7%A9%BA%E6%A0%BC.jpg" /></p>
+<ol>
+<li>提示停留 3 秒之后收起</li>
+<li>点击 <strong>关闭</strong> 按钮可以立即关闭提示，返回 <a href="#m0-3-4-">M0-3-4. 注册 - 输入注册密码</a></li>
+</ol>
+<h3 id="m0-3-5-">M0-3-5. 注册 - 注册中<a class="headerlink" href="#m0-3-5-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-3-5.%20%E6%B3%A8%E5%86%8C%20-%20%E6%B3%A8%E5%86%8C%E4%B8%AD.jpg" /></p>
+<ol>
+<li>分以下三种情况：<ul>
+<li>若网络正常且验证码输入正确，则进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-0-6">M0-6. 选择设备</a></li>
+<li>若网络不可用则进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-5-1">M0-5-1. 全局网络不可用</a></li>
+<li>若网络可用但验证码输入不正确，则进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-5-9">M0-5-9. 验证码有误</a></li>
+</ul>
+</li>
+</ol>
+<h3 id="m0-3-6">M0-3-6. 用户协议<a class="headerlink" href="#m0-3-6" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-3-6.%20%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3">M0-3. 注册首页</a></li>
+<li>解析网页端的数据，并生成缓存。若因为网络不可用导致数据无法加载，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-5-10">M0-5-10. 用户协议不能加载</a></li>
+</ol>
+<h3 id="m0-4">M0-4. 忘记密码<a class="headerlink" href="#m0-4" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-4.%20%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.jpg" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>此处的交互与前面的一样，不再详述</p>
+</div>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2">M0-2. 登录首页</a></li>
+<li>点击进行输入手机号码<ul>
+<li>手机号码输入出失焦后检测已注册过，<strong>获取验证码</strong> 按钮变为可点击状态</li>
+<li>手机号码输入出失焦后检测没注册过，则弹出提示，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-4-1-">M0-4-1. 忘记密码 - 手机号码未注册</a></li>
+</ul>
+</li>
+<li>手机号码输入出失焦后检测已注册过，<strong>获取验证码</strong> 按钮变为可点击状态，点击可获取验证码</li>
+<li>点击输入验证码</li>
+<li>点击输入新密码</li>
+<li>当以上信息均填写完毕后，<strong>登录</strong> 按钮变为可点击状态，点击后进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2-3-">M0-2-3. 登录 - 登录中</a></li>
+</ol>
+<h3 id="m0-4-1-">M0-4-1. 忘记密码 - 手机号码未注册<a class="headerlink" href="#m0-4-1-" title="Permanent link">&para;</a></h3>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>此提示为警告 / 错误类 toast 提示</p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-4-1.%20%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%20-%20%E6%89%8B%E6%9C%BA%E5%8F%B7%E7%A0%81%E6%9C%AA%E6%B3%A8%E5%86%8C.jpg" /></p>
+<ol>
+<li>提示停留 3 秒之后收起</li>
+<li>点击 <strong>关闭</strong> 按钮可以立即关闭提示，返回 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-4">M0-4. 忘记密码</a></li>
+<li>点击进行输入手机号码</li>
+<li><strong>获取验证码</strong> 按钮在倒计时 60 秒结束后可重新点击</li>
+<li>点击输入验证码</li>
+<li>点击输入新密码</li>
+<li>当以上信息均填写完毕后，<strong>登录</strong> 按钮变为可点击状态，点击后进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2-3-">M0-2-3. 登录 - 登录中</a></li>
+</ol>
+<h3 id="m0-5-1">M0-5-1. 全局网络不可用<a class="headerlink" href="#m0-5-1" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-5-1.%20%E5%85%A8%E5%B1%80%E7%BD%91%E7%BB%9C%E4%B8%8D%E5%8F%AF%E7%94%A8.jpg" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>此对话框为全局 alert，当由于网络原因造成手机无法与服务器进行交互的时候，弹出此对话框</p>
+</div>
+<ol>
+<li>点击 <strong>我知道了</strong> 按钮关闭对话框并返回前一个页面</li>
+</ol>
+<h3 id="m0-5-2">M0-5-2. 手机号未注册<a class="headerlink" href="#m0-5-2" title="Permanent link">&para;</a></h3>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>此提示为警告 / 错误类 toast 提示</p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-5-2.%20%E6%89%8B%E6%9C%BA%E5%8F%B7%E6%9C%AA%E6%B3%A8%E5%86%8C.jpg" /></p>
+<ol>
+<li>提示停留 3 秒之后收起</li>
+<li>点击 <strong>关闭</strong> 按钮可以立即关闭提示，返回 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2">M0-2. 登录首页</a></li>
+</ol>
+<h3 id="m0-5-3">M0-5-3. 登录手机号格式不正确<a class="headerlink" href="#m0-5-3" title="Permanent link">&para;</a></h3>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>此提示为警告 / 错误类 toast 提示</p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-5-3.%20%E7%99%BB%E5%BD%95%E6%89%8B%E6%9C%BA%E5%8F%B7%E6%A0%BC%E5%BC%8F%E4%B8%8D%E6%AD%A3%E7%A1%AE.jpg" /></p>
+<ol>
+<li>提示停留 3 秒之后收起</li>
+<li>点击 <strong>关闭</strong> 按钮可以立即关闭提示，返回 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2">M0-2. 登录首页</a></li>
+</ol>
+<h3 id="m0-5-4">M0-5-4. 帐号密码不正确<a class="headerlink" href="#m0-5-4" title="Permanent link">&para;</a></h3>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>此提示为警告 / 错误类 toast 提示</p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-5-4.%20%E5%B8%90%E5%8F%B7%E5%AF%86%E7%A0%81%E4%B8%8D%E6%AD%A3%E7%A1%AE.jpg" /></p>
+<ol>
+<li>提示停留 3 秒之后收起</li>
+<li>点击 <strong>关闭</strong> 按钮可以立即关闭提示，返回 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-2">M0-2. 登录首页</a></li>
+</ol>
+<h3 id="m0-5-5">M0-5-5. 手机号已注册<a class="headerlink" href="#m0-5-5" title="Permanent link">&para;</a></h3>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>此提示为警告 / 错误类 toast 提示</p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-5-5.%20%E6%89%8B%E6%9C%BA%E5%8F%B7%E5%B7%B2%E6%B3%A8%E5%86%8C.jpg" /></p>
+<ol>
+<li>提示停留 3 秒之后收起</li>
+<li>点击 <strong>关闭</strong> 按钮可以立即关闭提示，返回 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3">M0-3. 注册首页</a></li>
+</ol>
+<h3 id="m0-5-6">M0-5-6. 注册手机号格式不正确<a class="headerlink" href="#m0-5-6" title="Permanent link">&para;</a></h3>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>此提示为警告 / 错误类 toast 提示</p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-5-6.%20%E6%B3%A8%E5%86%8C%E6%89%8B%E6%9C%BA%E5%8F%B7%E6%A0%BC%E5%BC%8F%E4%B8%8D%E6%AD%A3%E7%A1%AE.jpg" /></p>
+<ol>
+<li>提示停留 3 秒之后收起</li>
+<li>点击 <strong>关闭</strong> 按钮可以立即关闭提示，返回 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3">M0-3. 注册首页</a></li>
+</ol>
+<h3 id="m0-5-7">M0-5-7. 验证码超出每天次数<a class="headerlink" href="#m0-5-7" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-5-7.%20%E9%AA%8C%E8%AF%81%E7%A0%81%E8%B6%85%E5%87%BA%E6%AF%8F%E5%A4%A9%E6%AC%A1%E6%95%B0.jpg" /></p>
+<ol>
+<li>点击 <strong>我知道了</strong> 按钮关闭对话框并返回 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3">M0-3. 注册首页</a></li>
+</ol>
+<h3 id="m0-5-8">M0-5-8. 手机号码被拉入黑名单<a class="headerlink" href="#m0-5-8" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-5-8.%20%E6%89%8B%E6%9C%BA%E5%8F%B7%E8%A2%AB%E6%8B%89%E5%85%A5%E9%BB%91%E5%90%8D%E5%8D%95.jpg" /></p>
+<ol>
+<li>点击 <strong>我知道了</strong> 按钮关闭对话框并返回 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3">M0-3. 注册首页</a></li>
+</ol>
+<h3 id="m0-5-9">M0-5-9. 验证码有误<a class="headerlink" href="#m0-5-9" title="Permanent link">&para;</a></h3>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>此提示为警告 / 错误类 toast 提示</p>
+</div>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-5-9.%20%E9%AA%8C%E8%AF%81%E7%A0%81%E6%9C%89%E8%AF%AF.jpg" /></p>
+<ol>
+<li>提示停留 3 秒之后收起</li>
+<li>点击 <strong>关闭</strong> 按钮可以立即关闭提示，返回 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3">M0-3. 注册首页</a></li>
+</ol>
+<h3 id="m0-5-10">M0-5-10. 用户协议不能加载<a class="headerlink" href="#m0-5-10" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-5-10.%20%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BD.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3">M0-3. 注册首页</a></li>
+<li>点击 <strong>点击刷新</strong> 按钮尝试重新加载页面，进入 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-5-11-">M0-5-11. 用户协议不能加载 - 加载中</a></li>
+</ol>
+<h3 id="m0-5-11-">M0-5-11. 用户协议不能加载 - 加载中<a class="headerlink" href="#m0-5-11-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-5-11.%20%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BD%20-%20%E5%8A%A0%E8%BD%BD%E4%B8%AD.jpg" /></p>
+<ol>
+<li>点击 <strong>返回</strong> 按钮返回 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3">M0-3. 注册首页</a></li>
+<li>尝试重新加载页面<ul>
+<li>若加载成功则显示页面信息，见 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-3-6">M0-3-6. 用户协议</a></li>
+<li>加载失败继续显示加载失败的信息，返回至 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-5-10">M0-5-10. 用户协议不能加载</a></li>
+</ul>
+</li>
+</ol>
+<h3 id="m0-6">M0-6. 选择设备<a class="headerlink" href="#m0-6" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="http://alpha-robot-docs.oss-cn-hangzhou.aliyuncs.com/design-docs/jett-mob/img/M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/M0-6.%20%E9%80%89%E6%8B%A9%E8%AE%BE%E5%A4%87.jpg" /></p>
+<ol>
+<li>点击 <strong>退出</strong> 按钮退出登录，返回至 <a href="M0.%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.md#m0-1-or">M0-1. 登录 or 注册页面</a></li>
+<li>点击大乐迪进入 <a href="M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-2.%E5%A4%A7%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1-5.%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5.md#">M1-1-5. 网络连接</a></li>
+<li>点击小乐迪进入  <a href="M1.%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1.%E5%B0%8F%E4%B9%90%E8%BF%AA%E8%AE%BE%E5%A4%87%E4%B8%BB%E9%A1%B5/M1-1-5.%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5.md#">M1-1-5. 网络连接</a></li>
+</ol>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../layout/" title="Layout" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                Layout
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../M1.设备主页/M1-1.小乐迪设备主页/M1-1.小乐迪设备主页/" title="M1-1. 小乐迪设备主页" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                M1-1. 小乐迪设备主页
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2017-2018 Auric. All rights reserved.
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.cb27f861.js"></script>
+      
+        
+        
+          
+          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
